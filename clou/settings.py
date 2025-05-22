@@ -36,6 +36,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'dj_rest_auth',
+    'rest_framework.authtoken',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,8 +50,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+SITE_ID = 1
+
+# 개발용 이메일 백엔드
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
