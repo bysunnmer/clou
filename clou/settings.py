@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'accounts',
     'movies',
+    'diary',
     'rest_framework',
     'corsheaders',
     'dj_rest_auth',
