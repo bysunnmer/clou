@@ -37,7 +37,7 @@ class MovieListSerializer(serializers.ModelSerializer):
 
 class MovieDetailSerializer(serializers.ModelSerializer):
     reviews = ReviewSerializer(many=True, read_only=True)
-    external_rating = serializers.FloatField()
+    vote_average = serializers.FloatField()
     is_liked = serializers.SerializerMethodField()
     
     class Meta:

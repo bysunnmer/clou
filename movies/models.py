@@ -21,6 +21,16 @@ class Movie(models.Model):
     # 감정 연결
     emotions = models.ManyToManyField('emotions.Emotion', related_name='movies', blank=True)
 
+    # 크롤링 기반 확장 필드
+    tagline = models.CharField(max_length=255, blank=True)
+    runtime = models.IntegerField(null=True, blank=True)
+    original_language = models.CharField(max_length=10, blank=True)
+    genres = models.CharField(max_length=255, blank=True)
+    director = models.CharField(max_length=100, blank=True)
+    cast = models.TextField(blank=True)
+    keywords = models.CharField(max_length=255, blank=True)
+    production_countries = models.CharField(max_length=255, blank=True)
+
     def __str__(self):
         return self.title # 이거 있으면 디버깅하기 좋다고 하는데 일단 모르겠음
 
