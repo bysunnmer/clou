@@ -91,11 +91,11 @@ def review_list_create(request, tmdb_id):
     elif request.method == 'POST':
         from django.contrib.auth import get_user_model
         User = get_user_model()
-        dummy_user = User.objects.first()  # ✅ 첫 번째 유저를 기본 유저로
+        dummy_user = User.objects.first()  # 첫 번째 유저를 기본 유저로
 
         serializer = ReviewSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(user=dummy_user, movie=movie)  # ✅ 여기서 user 지정
+            serializer.save(user=dummy_user, movie=movie)  # 여기서 user 지정
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
     ####임시 코드
@@ -156,7 +156,7 @@ def toggle_review_like(request, review_id):
     
     
 # ✅ 리뷰 답글 조회 및 생성
-# @api_view(['GET', 'POST'])  # ❗ 여기에 데코레이터 누락되어 있었음
+# @api_view(['GET', 'POST'])  
 # def review_reply_list_create(request, review_id):
 #     review = get_object_or_404(Review, pk=review_id)
 #     if request.method == 'GET':
