@@ -10,13 +10,13 @@ class User(AbstractUser):
   profile_image = models.ImageField(upload_to='profiles/', blank=True, null=True)
 
   # 좋아요한 영화 중 인생 영화 하나 선택 가능
-  # favorite_movie = models.ForeignKey(
-  #   'movies.Movie',
-  #   on_delete=models.SET_NULL,
-  #   blank=True,
-  #   null=True,
-  #   related_name='favored_by_users'
-  # )
+  favorite_movie = models.ForeignKey(
+    'movies.Movie',
+    on_delete=models.SET_NULL,
+    blank=True,
+    null=True,
+    related_name='favored_by_users'
+  )
 
   def __str__(self):
       return self.nickname or self.username
