@@ -24,7 +24,7 @@ class ReviewSerializer(serializers.ModelSerializer):
         return obj.likes.count()
 
 class MovieListSerializer(serializers.ModelSerializer):
-    external_rating = serializers.FloatField()
+    vote_average = serializers.FloatField()
     is_liked = serializers.SerializerMethodField()
     
     class Meta:

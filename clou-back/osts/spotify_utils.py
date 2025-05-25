@@ -22,6 +22,7 @@ def search_movie_ost(movie_title, limit=5):
     for item in response.json().get('tracks', {}).get('items', []):
         results.append({
             'title': item['name'],
+            'artist_name': item['artists'][0]['name'], 
             'preview_url': item['preview_url'],
             'spotify_url': item['external_urls']['spotify'],
         })
