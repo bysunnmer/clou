@@ -1,0 +1,302 @@
+[
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "A MINECRAFT MOVIE 마인크래프트 무비",
+      "overview": "왕년의 게임 챔피언이었지만 지금은 폐업 직전의 게임샵 주인이 된 '개릿'과 엄마를 잃고 낯선 동네로 이사 온 남매 '헨리'와 '나탈리' 그리고 그들을 돕는 부동산 중개업자 '던'. 이들은 ‘개릿’이 수집한 ‘큐브’가 내뿜는 신비한 빛을 따라가다 어느 폐광 속에 열린 포털을 통해 미지의 공간으로 빨려들어간다. 산과 나무, 구름과 달, 심지어 꿀벌까지 상상하는 모든 것이 네모난 현실이 되는 이곳은 바로 ‘오버월드’. 일찍이 이 세계로 넘어와 완벽하게 적응한 ‘스티브’를 만난 네 사람은 지하세계 ‘네더’를 다스리는 마법사 ‘말고샤’의 침공으로 ‘오버월드’가 위험에 빠졌다는 사실을 알게 된다. 현실 세계로 돌아가기 위해서는 일단 살아남아야 하는 법! 다섯 명의 ‘동글이’들은 ‘오버월드’를 구하기 위해 힘을 합치게 되는데…",
+      "poster_path": "/k5aQ2TqKcQFwPoXHkpAGoKNVDLZ.jpg",
+      "release_date": "2025-03-31",
+      "tmdb_id": 950387
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "파이널 데스티네이션: 블러드라인",
+      "overview": "끝없는 악몽에 시달리던 ‘스테파니’는 그 원인을 찾던 중  집안 대대로 내려오는 죽음의 저주와 그 실체를 알게 된다  놀랍게도, 죽음의 순서가 자신의 가족에게 이어졌음을 알게 되는데...  이제, 다음 차례는 누구?",
+      "poster_path": "/agaIglFrRGuUQOzkhzlrvcjJgt2.jpg",
+      "release_date": "2025-05-09",
+      "tmdb_id": 574475
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "워킹맨",
+      "overview": "전직 블랙 옵스 요원이었던 레본 케이드(제이슨 스타뎀)는 평범한 건설 노동자로 살아가며 딸과 함께 조용한 삶을 추구하고 있었으나 그의 상사의 딸이 인신매매 조직에 의해 납치되면서, 다시 과거의 전투 기술을 사용해 그녀를 구하기 위해 나서게 된다. 이 과정에서 시카고의 범죄 조직과 러시아 마피아와 얽히며, 부패와 폭력으로 가득 찬 어두운 세계를 마주하게 되는데...",
+      "poster_path": "/tK5sCN4cebvTt9MuSlNHehVQnYg.jpg",
+      "release_date": "2025-03-26",
+      "tmdb_id": 1197306
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "워페어",
+      "overview": "\"실화 기반, 전장의 숨결을 생생히 담아낸 리얼 타임 전쟁 드라마\"  2006년 이라크 라마디. 미 해군 특수부대 네이비 씰 팀이 적진 한복판에서 감시 임무를 수행하던 중, 예상치 못한 상황에 휘말리게 된다. 민가를 점거해 잠복하던 그들은 알카에다 세력의 포위망에 갇히고, 지원은 끊긴 채 생존을 위한 사투를 벌이게 된다. 전직 네이비 씰이자 실제 생존자인 레이 멘도자 감독과 '엑스 마키나', '시빌 워'의 알렉스 가란드 감독이 공동 연출한 이 작품은, 전투의 혼돈과 공포를 실시간으로 그려낸다. 화려한 음악이나 영웅 서사 없이, 전장의 소음과 침묵, 그리고 병사들의 숨결이 화면을 가득 채운다. 실화를 바탕으로 한 이 영화는, 전쟁의 참혹함과 인간의 생존 본능을 적나라하게 보여주며, 관객을 전장의 한가운데로 끌어들인다. 과연 이들은 살아남을 수 있을까...",
+      "poster_path": "/srj9rYrjefyWqkLc6l2xjTGeBGO.jpg",
+      "release_date": "2025-04-09",
+      "tmdb_id": 1241436
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "백설공주",
+      "overview": "눈보라가 몰아치던 겨울 밤 태어난 백설공주. 온정이 넘치던 왕국에서 모두의 사랑을 받았지만, 강력한 어둠의 힘으로 왕국을 빼앗은 여왕의 위협에 숲으로 도망친다. 마법의 숲에서 간신히 살아남은 백설공주는 신비로운 일곱 광부들과 만나게 되며 새로운 세상을 마주하고, 마음속 깊이 숨겨진 용기와 선한 힘을 깨닫게 된다. 그리고 마침내, 빼앗긴 왕국을 되찾기 위해 여왕과 맞서 싸우기로 결심하는데…",
+      "poster_path": "/7EruTgYzDFM8kWhr2ysuuwoXFqk.jpg",
+      "release_date": "2025-03-12",
+      "tmdb_id": 447273
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "Bambi: A Life in the Woods",
+      "overview": "The life of Bambi, a male roe deer, from his birth through childhood, the loss of his mother, the finding of a mate, the lessons he learns from his father, and the experience he gains about the dangers posed by human hunters in the forest.",
+      "poster_path": "/vWNVHtwOhcoOEUSrY1iHRGbgH8O.jpg",
+      "release_date": "2024-10-16",
+      "tmdb_id": 1094473
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "사라진 탄환 3",
+      "overview": "복수의 여정을 끝내기 위해 돌아온 자동차 천재 리노. 자신의 인생을 망가뜨린 아레스키와 부패한 경정을 붙잡기 위한 추적에 나선다. 터보 엔진을 장착한 액션 삼부작의 완결편.",
+      "poster_path": "/cd8ThAWer67IvETRmRm3NZFdhU2.jpg",
+      "release_date": "2025-05-06",
+      "tmdb_id": 1144430
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "미션 임파서블: 파이널 레코닝",
+      "overview": "디지털상의 모든 정보를 통제할 수 있는 사상 초유의 무기로 인해 전 세계 국가와 조직의 기능이 마비되고, 인류 전체가 위협받는 절체절명의 위기가 찾아온다. 이를 막을 수 있는 건 오직 존재 자체가 기밀인 에단 헌트와 그가 소속된 IMF뿐이다. 무기를 무력화하는 데 반드시 필요한 키를 손에 쥔 에단 헌트. 오랜 동료 루터와 벤지, 그리고 새로운 팀원이 된 그레이스, 파리, 드가와 함께 지금껏 경험했던 그 어떤 상대보다도 강력한 적에 맞서 모두의 운명을 건 불가능한 미션에 뛰어든다.",
+      "poster_path": "/5Zxdorl5TharlI9S47YxoKzGCsi.jpg",
+      "release_date": "2025-05-17",
+      "tmdb_id": 575265
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "Conjuring the Cult",
+      "overview": "After discovering his blood-soaked daughter dead in the bathtub, David Bryson attends a self-help group to help save him from his ghostly nightmares. But when a group of mysterious cult-like women offer to help him resurrect his daughter. David's choices will not just decide his fate... but the fate of his dead daughter's SOUL.",
+      "poster_path": "/t4MiAeYpjL7saYvqvcn9xtOfA4K.jpg",
+      "release_date": "2024-10-01",
+      "tmdb_id": 1359977
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "용감한 시민",
+      "overview": "불의는 못 본 척, 성질은 없는 척, 주먹은 약한 척 먹고 살기 위해 조용히 살아 온 기간제 교사 소시민. 법도 경찰도 무서울 것 하나 없는 안하무인 절대권력 한수강의 선을 넘는 행동을 목격하게 된다. 그의 계속되는 악행을 도저히 참을 수 없었던 그녀, 정체를 숨긴 채 통쾌한 한 방을 날리기로 마음 먹는데…",
+      "poster_path": "/oVJDtwC41sGx5zmWiEkhqwBlopD.jpg",
+      "release_date": "2023-10-25",
+      "tmdb_id": 897160
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "썬더볼츠*",
+      "overview": "어벤져스가 사라진 후, 세계 최대의 위협과 마주한 세상을 구하기 위해 전직 스파이, 암살자, 살인 청부 업자 등 마블의 별난 놈들이 펼치는 예측불허 팀플레이를 담은 액션 블록버스터",
+      "poster_path": "/1lI4iDsaVnOnnZPI9igWkL8jHPL.jpg",
+      "release_date": "2025-04-30",
+      "tmdb_id": 986056
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "The Haunting at Saint Joseph's",
+      "overview": "An engaged Muslim doctor, her fiancé, and their friends go on a holiday at St. Joseph’s Guesthouse, unaware that it was the site of a sacrifice of an innocent centuries before. They soon come to believe that it's haunted and causing them to go crazy, as their emotions spiral out of control.",
+      "poster_path": "/eDzQFxs0KTzHUPkIR0c44TSGJUR.jpg",
+      "release_date": "2023-02-26",
+      "tmdb_id": 1092073
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "엑스테리토리얼",
+      "overview": "전직 특수부대 출신 군인 자라. 아들이 미국 영사관에서 흔적도 없이 사라지자, 아들을 찾기 위해 온힘을 쏟아붓고 그 과정에서 어두운 음모를 발견한다.",
+      "poster_path": "/s6BLJiER9pNRKGrVmqcue1OcBHb.jpg",
+      "release_date": "2025-04-29",
+      "tmdb_id": 1233069
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "인 더 로스트 랜즈",
+      "overview": "여왕은 강력하고 두려운 마법사 그레이 앨리스를 잃어버린 땅의 유령이 들끓는 황야로 보내 마법의 힘을 찾게 합니다. 그곳에서 그녀와 그녀의 안내자인 방랑자 보이스는 인간과 악마를 따돌리고 싸워야 합니다.",
+      "poster_path": "/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
+      "release_date": "2025-02-27",
+      "tmdb_id": 324544
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "러스트",
+      "overview": "\"그가 돌아온다, 서부 개척 시대의 처절한 생존 드라마\"\r 1882년 와이오밍 개척지, 13살 소년 루카스 홀리스터는 의도치 않은 사고로 현지 목장주를 죽이고 사형 선고를 받게 된다. 법의 심판을 피해 도망치던 그에게 유일한 희망은 오랫동안 소원했던 할아버지 밖에 없다. 험상궂고 무뚝뚝한 19세기 무법자 할아버지는 어쩔 수 없이 손자를 구하기 위해 나서게 된다. 웅장한 서부 풍경 속에서 펼쳐지는 카우보이와 무법자들의 이야기, 그리고 이 나라의 신화에 기초가 된 청교도적 도덕적 딜레마가 루카스와 그의 할아버지 앞에 놓인다. 피할 수 없는 과거의 그림자와 막다른 선택의 기로에서, 두 사람은 생존을 위한 처절한 여정을 시작하는데...",
+      "poster_path": "/tbJ3RkA2s6X5qrBzrYHYTxvDBui.jpg",
+      "release_date": "2025-05-01",
+      "tmdb_id": 710258
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "From the Shadows",
+      "overview": "When Dr. Joseph Cawl and members of his Hidden Wisdom cult die in a mysterious fire, survivors contact a paranormal expert to find the truth. What they discover makes them the next target of a deranged killer.",
+      "poster_path": "/22aFuf6UnDaGP9G5CLfF92Cj1nf.jpg",
+      "release_date": "2023-09-22",
+      "tmdb_id": 1180763
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "캡틴 아메리카: 브레이브 뉴 월드",
+      "overview": "대통령이 된 새디우스 로스와 재회 후, 국제적인 사건의 중심에 서게 된 샘이 전 세계를 붉게 장악하려는 사악한 음모 뒤에 숨겨진 존재와 이유를 파헤쳐 나가는 액션 블록버스터",
+      "poster_path": "/2MQdtfioyYSqgwkK07PSrBidOBC.jpg",
+      "release_date": "2025-02-12",
+      "tmdb_id": 822119
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "씨너스: 죄인들",
+      "overview": "1932년, 시카고 갱단의 생활을 정리하고 고향 미시시피로 돌아온 쌍둥이 형제 스모크와 스택은 큰돈을 벌기 위해 술집 주크 조인트를 운영하기로 한다. 화려한 오프닝 파티가 열리는 밤, 천부적인 재능을 지닌 새미의 노래로 파티의 열기는 점점 뜨거워지고 초대하지 않은 불청객 일행이 찾아오는데…",
+      "poster_path": "/5Tj7729s3MLmzNnAzaHSCWtzj5o.jpg",
+      "release_date": "2025-04-16",
+      "tmdb_id": 1233413
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "Stream",
+      "overview": "Craven, a streamer with thousands of followers on a live streaming platform, has prepared a very special stream for Halloween. What no one expects when reacting to a video of Pentagram, a group of young paranormal investigators, is that the live experience will turn into the worst night of their lives. And maybe... the last.",
+      "poster_path": "/nnyjtBfUYA8ASHA9OhADrX0sMNQ.jpg",
+      "release_date": "2024-02-06",
+      "tmdb_id": 1260820
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "해벅",
+      "overview": "마약 절도 사건이 통제 불능으로 치닫는 상황. 지칠 대로 지친 경찰이 정치가의 아들을 구하기 위해 부패한 도시의 지하 범죄 세계와 싸우며 길을 헤쳐 나간다.",
+      "poster_path": "/oYUJsUlH0aoTNiKWJ78LD0cUVov.jpg",
+      "release_date": "2025-04-25",
+      "tmdb_id": 668489
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "Laila",
+      "overview": "Sonu Model, a renowned beautician from the old city, is forced to disguise himself as Laila, leading to a series of comedic, romantic, and action-packed events. Chaos ensues in this hilarious laugh riot",
+      "poster_path": "/l4gsNxFPGpzbq0D6QK1a8vO1lBz.jpg",
+      "release_date": "2025-02-14",
+      "tmdb_id": 1403735
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "데스 오브 유니콘",
+      "overview": "​\"그날 밤, 그들은 상상조차 못한 존재와 마주쳤다\"\r 과부인 엘리엇 킨터와 그의 딸 리들리는 캐나다 로키산맥으로 떠나는 길에 우연히 신비로운 새끼 유니콘과 충돌하게 된다. 이 사건으로 인해 그들은 엘리엇의 억만장자 상사인 오델 레오폴드의 별장에 도착하게 되고, 레오폴드 가족은 유니콘의 치유력을 탐내기 시작한다. 하지만 그들이 간과한 사실은, 유니콘의 부모가 그들의 새끼를 찾기 위해 다가오고 있다는 것인데...",
+      "poster_path": "/lXR32JepFwD1UHkplWqtBP1K79z.jpg",
+      "release_date": "2025-03-27",
+      "tmdb_id": 1153714
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "모아나 2",
+      "overview": "바다를 누볐던 선조들에게서 예기치 못한 부름을 받은 모아나가 마우이와 다시 만나 새로운 선원들과 함께 오랫동안 잊혀진 멀고 위험한 바다 너머로 떠나는 특별한 모험을 담은 이야기",
+      "poster_path": "/hwmwTFtMbzxAWbIOp1RyyiOCyx0.jpg",
+      "release_date": "2024-11-21",
+      "tmdb_id": 1241982
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "¡Qué Huevos, Sofía!",
+      "overview": "Sofia gives everything for the company where she works, but the position she was promised is given to the owner's niece. She and other colleagues, tired of working for an unbearable boss, quit to start their own bakery. What they did not consider is that their ex-boss will not rest until he sees them fail.",
+      "poster_path": "/hhfWpdNmPwU1VV7zhNA1nOMbHkH.jpg",
+      "release_date": "2025-02-27",
+      "tmdb_id": 1233620
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "배드 인플루언스",
+      "overview": "감옥에서 출소한 이후, 스토커에게 시달리는 부유한 상속녀의 경호원으로 새출발하게 된 남자. 그런데 두 사람이 점점 가까워지면서, 서로에게 이끌리는 감정을 숨길 수 없게 된다.",
+      "poster_path": "/zkvC8gI8Mk0RIVrhaYrLr4cRWAO.jpg",
+      "release_date": "2025-01-24",
+      "tmdb_id": 1323784
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "Saint Catherine",
+      "overview": "An orphaned girl is rescued from a satanic ritual and taken to Saint Catherine Institute for homeless youth. There she will learn new skills while facing demons that stalk her.",
+      "poster_path": "/hBJdzKPeDaC96AzlrtMWBomYSZV.jpg",
+      "release_date": "2024-09-24",
+      "tmdb_id": 1356236
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "더 몽키",
+      "overview": "\"공포의 근원, 악을 품은 인형의 저주\"\r 쌍둥이 형제 빌과 테드는 할아버지의 유품 정리 중 오래된 원숭이 장난감을 발견한다. 심벌즈를 치는 이 원숭이 인형은 어린 시절 그들에게 공포의 대상이었지만, 이제 어른이 된 두 형제는 그것을 단순한 장난감으로 치부한다. 하지만 인형이 다시 집에 들어오자 기이한 사건들이 연이어 발생하기 시작한다. 어린 시절의 트라우마가 되살아나고, 원숭이 인형을 둘러싼 끔찍한 비밀이 드러나며 형제의 삶은 걷잡을 수 없는 혼돈 속으로 빠져드는데...",
+      "poster_path": "/yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg",
+      "release_date": "2025-02-14",
+      "tmdb_id": 1124620
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "보석 도둑: 더 하이스트 비긴스",
+      "overview": "기발한 사기꾼 레한이 잔혹한 라이벌 라잔을 따돌리기 위해 치밀한 다이아몬드 강탈 작전을 계획한다. 치열한 두뇌 싸움과 긴장감 넘치는 전개가 돋보이는 작품.",
+      "poster_path": "/miJvhfYMvPymG75Gl4q0QatyNBk.jpg",
+      "release_date": "2025-04-24",
+      "tmdb_id": 1225915
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "무파사: 라이온 킹",
+      "overview": "길을 잃고 혼자가 된 새끼 사자 무파사는 광활한 야생을 떠돌던 중 왕의 혈통이자 예정된 후계자 타카와 우연히 만나게 된다. 마치 친형제처럼 끈끈한 우애를 나누며 함께 자란 무파사와 타카는 운명을 개척하기 위해 거대한 여정을 함께 떠난다. 한 치 앞을 알 수 없는 적들의 위협 속에서 두 형제의 끈끈했던 유대에 금이 가기 시작하고 예상치 못한 위기까지 맞닥뜨리게 되는데…",
+      "poster_path": "/1VUExee8iFohFTwYVi4IOArYyaM.jpg",
+      "release_date": "2024-12-18",
+      "tmdb_id": 762509
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "title": "데스티네이션",
+      "overview": "알렉스 브라우닝은 그의 고등학교 불어반 친구들과 파리로 출발하려는 순간, 비행기안에서 강렬한 환영을 경험하게 된다. 바로 비행기가 출발과 동시에 폭발하는 모습을 생생하게 본 것. 그는 모두 곧 비행기에서 내릴 것을 주장하고, 한차례 혼란이 있은 후에 알렉스를 포함한 7명이 비행기에서 내리게 된다. 공항 라운지로 돌아왔을 때, 알렉스와 그의 친구인 빌리와 토드, 알렉스를 본능적으로 따른 클레어, 알렉스를 비웃음거리로 만들려는 카터와 그녀의 여자친구 테리, 그리고 학생보호를 위하여 비행기에서 내린 류턴 선생까지 7명의 사람들은 엄청난 비행기 폭발을 직접 목격한다. 하지만 사건후 오히려 생존자들은 알렉스의 무시무시한 예지력에 공포를 느끼고, 또한 FBI는 그에게 의혹의 눈초리를 보낸다. 스스로 혼란에 빠진 알렉스는 어찌되었든 그를 비롯한 생존자들이 쉽게 말해서 자신들에게 다가온 죽음의 운명을 속였고, 이러한 자신들의 운명이 오래가지 못함을 알게 된다. 하지만 클레어를 제외한 생존자중 누구도 알렉스를 믿지않고, 이들에게 죽음의 사신이 다가온다.",
+      "poster_path": "/kPqTDpKN3lkteEV1OegqpZ6GHL6.jpg",
+      "release_date": "2000-03-17",
+      "tmdb_id": 9532
+    }
+  }
+]
