@@ -29,7 +29,7 @@ class MovieListSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Movie
-        fields = ['id', 'tmdb_id', 'title', 'poster_path', 'vote_average', 'is_liked']
+        fields = ['id', 'tmdb_id', 'title', 'poster_path', 'vote_average', 'is_liked','overview']
     
     def get_is_liked(self, obj):
         user = self.context.get('request').user

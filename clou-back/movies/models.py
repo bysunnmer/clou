@@ -7,29 +7,21 @@ class Movie(models.Model):
     tmdb_id = models.IntegerField(unique=True)
     title = models.CharField(max_length=200)
     overview = models.TextField(blank=True)
-    poster_path = models.CharField(max_length=255)
-    release_date = models.DateField(null=True, blank=True)
-    # 외부별점 (이거 우리가 가져오는거에 있는지 확인필요)
-    vote_average = models.FloatField(null=True, blank=True)
-    
-    # 영화 찜기능
-    liked_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='liked_movies', blank=True)
-    
-    # 영화를 어떤 기준으로 수집했는지
-    source_type = models.CharField(max_length=50, blank=True)
-    
-    # 감정 연결
-    emotions = models.ManyToManyField('emotions.Emotion', related_name='movies', blank=True)
-
-    # 크롤링 기반 확장 필드
     tagline = models.CharField(max_length=255, blank=True)
-    runtime = models.IntegerField(null=True, blank=True)
-    original_language = models.CharField(max_length=10, blank=True)
     genres = models.CharField(max_length=255, blank=True)
+    production_countries = models.CharField(max_length=255, blank=True)
+    vote_average = models.FloatField(null=True, blank=True)
+    runtime = models.FloatField(null=True, blank=True)
+    original_language = models.CharField(max_length=10, blank=True)
     director = models.CharField(max_length=100, blank=True)
     cast = models.TextField(blank=True)
     keywords = models.CharField(max_length=255, blank=True)
-    production_countries = models.CharField(max_length=255, blank=True)
+    poster_path = models.CharField(max_length=255)
+    release_date = models.DateField(null=True, blank=True)
+
+    liked_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='liked_movies', blank=True)
+    source_type = models.CharField(max_length=50, blank=True)
+    emotions = models.ManyToManyField('emotions.Emotion', related_name='movies', blank=True)
 
     def __str__(self):
         return self.title # 이거 있으면 디버깅하기 좋다고 하는데 일단 모르겠음
