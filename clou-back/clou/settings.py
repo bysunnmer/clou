@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-SITE_ID = 1
 
 # 개발용 이메일 백엔드
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -170,3 +169,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 #스포티파이 계정 관련
 SPOTIFY_CLIENT_ID = config('SPOTIFY_CLIENT_ID')
 SPOTIFY_CLIENT_SECRET = config('SPOTIFY_CLIENT_SECRET')
+
+# Django-allauth 이메일 확인 설정 간소화
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # 이메일 확인 이메일 전송 안함
+ACCOUNT_EMAIL_REQUIRED = False       # 이메일 필수 입력 아님
+SITE_ID = 1                          # django.contrib.sites 설정

@@ -16,12 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from accounts.views import CustomRegisterView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('dj_rest_auth.urls')),
-    path('accounts/signup/', include('dj_rest_auth.registration.urls')),
+    # 커스텀 회원가입 URL - 가장 먼저 정의하여 우선순위 부여
+    path('accounts/signup/', CustomRegisterView.as_view(), name='rest_register'),
+    # 중복 검사 API와 계정 관리 URL
     path('accounts/', include('accounts.urls')),
+    # 로그인, 로그아웃 등 기본 인증 URL
+    path('accounts/', include('dj_rest_auth.urls')),
+    # dj-rest-auth 회원가입 URL은 사용하지 않음 (커스텀 URL 사용)
+    # path('accounts/signup/', include('dj_rest_auth.registration.urls')),
+    # 기타 API 엔드포인트
     path('api/v1/diary/', include('diary.urls')),
     path('api/v1/movies/', include('movies.urls')),
     path('api/v1/emotions/', include('emotions.urls')),
