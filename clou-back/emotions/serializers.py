@@ -6,7 +6,7 @@ from .models import Emotion
 class EmotionMovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = ['id', 'tmdb_id', 'title', 'poster_path', 'vote_average']
+        fields = ['id', 'tmdb_id', 'title', 'poster_path', 'vote_average', 'overview']
 
 ### 감정
 class EmotionSerializer(serializers.ModelSerializer):

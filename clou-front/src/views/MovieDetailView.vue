@@ -1,222 +1,308 @@
 <template>
-    <div v-if="movie">
-        <h2>{{ movie.title }}</h2>
-        <img :src="getImageUrl(movie.poster_path)" :alt="movie.title" />
-        <p>개봉일: {{ movie.release_date }}</p>
-        <p>평점: {{ movie.vote_average }}</p>
-        <p>소개: {{ movie.overview }}</p>
-        
-        <!-- OST 리스트 -->
-        <div v-if="movie.osts && movie.osts.length" class="osts">
-            <h3>🎵 OST</h3>
-            <ul>
-              <li v-for="(ost, index) in movie.osts" :key="index">
-                <p>
-                  <strong>{{ ost.name }}</strong>
-                  <span v-if="ost.artist_name"> - {{ ost.artist_name }}</span>
-                </p>
-                <a :href="ost.spotify_url" target="_blank">[Spotify]</a><br />
-                <audio v-if="ost.preview_url" :src="ost.preview_url" controls></audio>
-              </li>
-            </ul>
-          </div>
-        <!-- 🔻 리뷰 섹션 -->
-        <div class="reviews">
-            <h3>📝 리뷰</h3>
-    
-            <!-- ✍️ 리뷰 작성 폼 -->
-            <div class="review-form">
-            <textarea v-model="newReview" placeholder="리뷰를 입력하세요"></textarea>
-            <button @click="submitReview">작성하기</button>
-            </div>
-    
-            <!-- 📃 리뷰 목록 -->
-            <div v-if="movie.reviews && movie.reviews.length">
-            <ul>
-                <li v-for="review in movie.reviews" :key="review.id">
-                <p><strong>{{ review.username }}</strong>: {{ review.content }}</p>
-                <p class="date">{{ formatDate(review.created_at) }}</p>
-    
-                <!-- 👍 좋아요 -->
-                <button class="like-btn" @click="handleLike(review)">
-                    {{ review.is_liked ? '👍' : '🤍' }} {{ review.like_count }}
-                </button>
-    
-                <!-- 🗑️ 삭제 (본인만) -->
-                <button
-                    v-if="review.user_id === currentUserId"
-                    class="delete-btn"
-                    @click="handleDelete(review.id)"
-                >
-                    삭제
-                </button>
-                </li>
-            </ul>
-            </div>
-            <div v-else>
-            <p>아직 리뷰가 없습니다.</p>
-            </div>
+  <div class="detail-wrapper" v-if="movie">
+    <!-- 🎬 상단 히어로 섹션 -->
+    <div class="hero">
+      <div
+        class="hero-backdrop"
+        :style="{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.95) 100%), url('${getImageUrl(movie.poster_path)}')` }"
+      ></div>
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="title">{{ movie.title }}</h1>
+          <p class="release"><strong>개봉일:</strong> {{ movie.release_date }}</p>
+          <p class="overview-hero">
+            <strong>소개:</strong>
+            {{ movie.overview ? movie.overview.slice(0, 100) + (movie.overview.length > 100 ? '...' : '') : '소개 정보가 없습니다.' }}
+          </p>
+          <p v-if="movie.tagline" class="tagline">“{{ movie.tagline }}”</p>
         </div>
+      </div>
     </div>
+
+    <!-- 📄 상세 정보 카드 -->
+    <div class="detail-content">
+      <div class="poster-box">
+        <img :src="getImageUrl(movie.poster_path)" :alt="movie.title" class="poster" />
+      </div>
+      <div class="info-box">
+        <p><strong>개봉일:</strong> {{ movie.release_date }}</p>
+        <p v-if="movie.vote_average !== null">
+          <strong>평점:</strong> ⭐ {{ movie.vote_average.toFixed(1) }} / 10
+        </p>
+        <p><strong>상영시간:</strong> {{ movie.runtime }}분</p>
+        <p><strong>장르:</strong> {{ movie.genres }}</p>
+        <p><strong>제작국가:</strong> {{ movie.production_countries }}</p>
+        <p><strong>언어:</strong> {{ movie.original_language }}</p>
+        <p><strong>감독:</strong> {{ movie.director }}</p>
+        <p><strong>출연진:</strong> {{ movie.cast }}</p>
+        <p><strong>키워드:</strong> {{ movie.keywords }}</p>
+        <p><strong>소개:</strong> {{ movie.overview }}</p>
+
+        <button class="like-btn" @click="toggleLike(movie)" :aria-label="movie.is_liked ? '찜 해제' : '찜하기'">
+          {{ movie.is_liked ? '❤️ 찜함' : '🤍 찜하기' }}
+        </button>
+      </div>
+    </div>
+
+    <!-- 리뷰 섹션
+    <div class="review-section" v-if="movie.reviews?.length">
+      <h3 class="review-title">📝 리뷰</h3>
+      <ul class="review-list">
+        <li v-for="review in movie.reviews" :key="review.id">
+          <p><strong>{{ review.username }}</strong>: {{ review.content }}</p>
+          <p class="date">{{ new Date(review.created_at).toLocaleDateString() }}</p>
+        </li>
+      </ul>
+    </div> -->
+
+    <div v-if="showAlert" class="popup-alert">{{ alertMessage }}</div>
+    <ReviewSection :movieId="movie.id" />
+  </div>
 </template>
-  
 
 <script setup>
-    import { ref, onMounted } from 'vue'
-    import { useRoute } from 'vue-router'
-    import axios from 'axios'
-    
-    const route = useRoute()
-    const movie = ref(null)
-    const newReview = ref('')
-    
-    // ✅ (임시) 현재 로그인된 사용자 ID
-    const currentUserId = 1 // 실제 구현 시 백엔드에서 받아와야 함
-    
-    onMounted(async () => {
-      const id = route.params.id
-      try {
-        const response = await axios.get(`http://localhost:8000/api/v1/movies/${id}/`)
-        movie.value = response.data
-      } catch (error) {
-        console.error('영화 불러오기 실패:', error)
-      }
-    })
-    
-    // ✅ 포스터 경로
-    const getImageUrl = (path) => {
-      return path
-        ? `https://image.tmdb.org/t/p/w300${path}`
-        : 'https://via.placeholder.com/300x450?text=No+Image'
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { fetchMovieById, likeMovie, unlikeMovie } from '@/api/movies'
+import ReviewSection from '@/components/ReviewSection.vue' //
+
+const route = useRoute()
+const movie = ref(null)
+const showAlert = ref(false)
+const alertMessage = ref('')
+
+onMounted(async () => {
+  try {
+    const res = await fetchMovieById(route.params.id)
+    movie.value = res.data
+  } catch (err) {
+    console.error('영화 정보 로딩 실패:', err)
+  }
+})
+
+const toggleLike = async (movieItem) => {
+  try {
+    if (movieItem.is_liked) {
+      await unlikeMovie(movieItem.id)
+    } else {
+      await likeMovie(movieItem.id)
     }
-    
-    // ✅ 날짜 포맷
-    const formatDate = (datetime) => {
-      return new Date(datetime).toLocaleString('ko-KR', {
-        dateStyle: 'medium',
-        timeStyle: 'short'
-      })
-    }
-    
-    // ✅ 리뷰 작성
-    const submitReview = async () => {
-      if (!newReview.value.trim()) return alert('리뷰를 입력하세요')
-      try {
-        const response = await axios.post(
-          `http://localhost:8000/api/v1/movies/${route.params.id}/reviews/`,
-          { content: newReview.value },
-          { withCredentials: true }
-        )
-        movie.value.reviews.push(response.data)
-        newReview.value = ''
-      } catch (error) {
-        console.error('리뷰 작성 실패:', error)
-        alert('로그인이 필요합니다')
-      }
-    }
-    
-    // ✅ 리뷰 삭제
-    const handleDelete = async (reviewId) => {
-      if (!confirm('정말 삭제할까요?')) return
-      try {
-        await axios.delete(`http://localhost:8000/api/v1/reviews/${reviewId}/`)
-        movie.value.reviews = movie.value.reviews.filter(r => r.id !== reviewId)
-      } catch (error) {
-        console.error('삭제 실패:', error)
-        alert('삭제할 수 없습니다.')
-      }
-    }
-    
-    // ✅ 좋아요 토글
-    const handleLike = async (review) => {
-      try {
-        if (review.is_liked) {
-          await axios.delete(`http://localhost:8000/api/v1/reviews/${review.id}/like/`)
-          review.like_count -= 1
-        } else {
-          await axios.post(`http://localhost:8000/api/v1/reviews/${review.id}/like/`)
-          review.like_count += 1
-        }
-        review.is_liked = !review.is_liked
-      } catch (error) {
-        console.error('좋아요 실패:', error)
-        alert('로그인이 필요합니다.')
-      }
-    }
+    movieItem.is_liked = !movieItem.is_liked
+  } catch (err) {
+    alertMessage.value = '로그인이 필요합니다!'
+    showAlert.value = true
+    setTimeout(() => (showAlert.value = false), 2000)
+  }
+}
+
+const getImageUrl = (path) =>
+  path ? `https://image.tmdb.org/t/p/w500${path}` : 'https://placehold.co/300x450?text=No+Image&font=roboto'
 </script>
-    
 
 <style scoped>
-    .reviews {
-      margin-top: 2rem;
+.detail-wrapper {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #f8f9fa;
+  padding-top: 4.5rem;
+}
+
+.detail-wrapper .hero {
+  height: 55vh;
+}
+
+/* 🎬 Hero 스타일 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.hero-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: none;
+  color: #fff;
+  padding: 3rem 2rem 2rem;
+}
+
+
+.hero-content {
+  max-width: 1100px;     /* detail-content와 동일하게 */
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 2rem;    /* detail-content와 동일하게 */
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.hero-content .overview-hero {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  color: #f3f3f3;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  max-width: 700px;
+  word-break: break-all;
+}
+
+.hero .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.hero .tagline {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+/* 📄 상세 정보 */
+.detail-content {
+  max-width: 1100px;
+  margin: 2rem auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.poster-box {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+.poster {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.info-box {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.info-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.like-btn {
+  background-color: #00A676;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+.like-btn:hover {
+  background-color: #008b5c;
+}
+
+.review-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+.review-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.review-list {
+  list-style: none;
+  padding: 0;
+}
+.review-list li {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.review-list .date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.popup-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00A676;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
+
+
+  @media (max-width: 768px) {
+    .hero-content .release {
+      display: block; /* 개봉일 표시 */
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+      color: #f3f3f3;
     }
-    .reviews ul {
-      list-style: none;
-      padding: 0;
+    .hero .tagline,
+    .hero-content .overview-hero {
+      display: -webkit-box;         /* 보이게 변경 */
+      -webkit-line-clamp: 2;        /* 2줄까지만 표시 */
+      -webkit-box-orient: vertical;
+      max-height: 3rem;             /* 높이 제한 */
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .reviews li {
-      border-bottom: 1px solid #ccc;
-      padding: 0.5rem 0;
+    .detail-wrapper {
+      padding-top: 4.5rem; 
     }
-    .date {
-      color: #888;
-      font-size: 0.85rem;
+    .hero {
+      height: 40vh; /* 히어로 높이 축소 유지 */
     }
-    .review-form {
-        margin-top: 2rem;
-      }
-      .review-form textarea {
-        width: 100%;
-        min-height: 80px;
-        padding: 0.5rem;
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-      }
-      .review-form button {
-        background-color: #222;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        font-weight: bold;
-      }
-      .delete-btn {
-        background-color: crimson;
-        color: white;
-        border: none;
-        padding: 0.2rem 0.5rem;
-        margin-left: 0.5rem;
-        cursor: pointer;
-      }
-      .like-btn {
-        background: none;
-        border: none;
-        font-size: 1rem;
-        color: #444;
-        cursor: pointer;
-      }
-        .emotions {
-          margin-top: 2rem;
-        }
-        .emotion-tags {
-          display: flex;
-          gap: 0.5rem;
-          flex-wrap: wrap;
-        }
-        .emotion {
-          background-color: #f3f3f3;
-          border-radius: 1rem;
-          padding: 0.3rem 0.8rem;
-          font-size: 0.95rem;
-        }
-        .osts {
-          margin-top: 2rem;
-        }
-        .osts ul {
-          list-style: none;
-          padding: 0;
-        }
-        .osts li {
-          margin-bottom: 1rem;
-        }        
+    .detail-content {
+      flex-direction: column;
+      align-items: center;     /* 수평 중앙 정렬 */
+      justify-content: center; /* 수직 중앙 정렬 (옵션) */
+      text-align: center;      /* 텍스트 중앙 정렬 */
+    }
+    .info-box {
+      align-items: center;
+      text-align: center;
+    }
+  }
 </style>
