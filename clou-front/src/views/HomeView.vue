@@ -25,16 +25,7 @@
               </div>
             </div>
           </div>
-          <div class="scroll-indicator">
-            <div class="mouse">
-              <div class="wheel"></div>
-            </div>
-            <div class="arrow">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
+          <!-- 스크롤 표시 제거 -->
         </div>
       </div>
     </section>
@@ -126,10 +117,12 @@
     position: relative;
     padding: 0 2rem;
     box-sizing: border-box;
+
   }
 
   .text-content {
     max-width: 600px;
+    padding-left: 7rem;
   }
   
   .headline {
@@ -160,7 +153,7 @@
   .cta-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 2rem;
   }
   
@@ -168,7 +161,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 450px;
   }
   
@@ -326,6 +319,7 @@
       text-align: center;
       width: 100%;
       max-width: 100%;
+      padding-left: 0rem;
     }
     
     .headline, .sub-headline, .subtext {

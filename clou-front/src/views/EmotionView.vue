@@ -1,13 +1,10 @@
 <template>
   <div class="emotion-view-wrapper">
-    <div class="header-section">
-      <h2 class="page-title">🎬 감정으로 찾는 영화</h2>
-      <p class="page-description">지금 느끼고 싶은 감정을 선택하여 나에게 딱 맞는 영화를 찾아보세요</p>
-    </div>
-    
-    <div class="emotion-content">
-      
-      <h2 class="section-title">어떤 감정을 느끼고 싶으세요?</h2>
+    <div class="emotion-list">
+      <div class="header-section">
+        <h2 class="page-title">👀 오늘은 어떤 기분이신가요?</h2>
+        <p class="page-description">감정을 클릭하면, 어울리는 영화가 기다리고 있어요</p>
+      </div>
       
       <!-- 감정 버튼 영역 -->
       <div class="emotion-buttons-container">
@@ -272,6 +269,7 @@ const handleError = (message) => {
   color: #333;
   position: relative;
   display: inline-block;
+  padding-top: 0.8rem;
 }
 
 .page-title::after {
@@ -292,7 +290,7 @@ const handleError = (message) => {
   line-height: 1.5;
 }
 
-.emotion-content {
+.emotion-list {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 1rem 3rem;
@@ -327,6 +325,8 @@ const handleError = (message) => {
 /* 감정 버튼 영역 */
 .emotion-buttons-container {
   margin-bottom: 3rem;
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
 .emotion-buttons {
@@ -338,8 +338,8 @@ const handleError = (message) => {
   border-radius: 16px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  max-width: 900px;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .emotion-btn {
