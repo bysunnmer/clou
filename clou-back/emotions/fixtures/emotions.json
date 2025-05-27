@@ -1,0 +1,82 @@
+[
+  {
+    "model": "emotions.emotion",
+    "pk": 1,
+    "fields": {
+      "name": "행복",
+      "description": "기쁨, 즐거움, 만족감 등 긍정적인 감정을 느끼게 하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 2,
+    "fields": {
+      "name": "슬픔",
+      "description": "눈물을 흘리게 하거나 애잔함, 그리움을 느끼게 하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 3,
+    "fields": {
+      "name": "공포",
+      "description": "무서움, 두려움, 긴장감을 느끼게 하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 4,
+    "fields": {
+      "name": "분노",
+      "description": "화나게 하거나 정의감을 자극하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 5,
+    "fields": {
+      "name": "사랑",
+      "description": "로맨스, 가족애, 우정 등 다양한 형태의 사랑을 느끼게 하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 6,
+    "fields": {
+      "name": "놀라움",
+      "description": "반전이나 의외의 상황에 놀라움을 느끼게 하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 7,
+    "fields": {
+      "name": "평온",
+      "description": "차분하고 안정적인 감정을 느끼게 하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 8,
+    "fields": {
+      "name": "긴장",
+      "description": "서스펜스와 스릴을 느끼게 하는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 9,
+    "fields": {
+      "name": "감동",
+      "description": "가슴 뭉클한 감동과 울림을 주는 영화"
+    }
+  },
+  {
+    "model": "emotions.emotion",
+    "pk": 10,
+    "fields": {
+      "name": "희망",
+      "description": "희망과 용기를 느끼게 하는 영화"
+    }
+  }
+]

@@ -1,12 +1,9 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from .models import Movie, Review, ReviewReply
-####임시 코드
-from rest_framework.permissions import AllowAny
-from rest_framework.decorators import permission_classes
-####임시 코드
 from osts.spotify_utils import search_movie_ost
 from .serializers import (
     MovieListSerializer,
@@ -14,9 +11,9 @@ from .serializers import (
     ReviewSerializer,
     ReviewReplySerializer
 )
-####임시 코드
 from django.contrib.auth import get_user_model
-####임시 코드
+
+User = get_user_model()
 
 # Create your views here.
 @api_view(['GET'])
@@ -38,33 +35,18 @@ def movie_detail(request, tmdb_id):
 
 # ✅ 영화 찜 기능
 @api_view(['POST'])
-####임시 코드
-@permission_classes([AllowAny])
-####임시 코드
-# def toggle_movie_like(request, tmdb_id):
-#     movie = get_object_or_404(Movie, tmdb_id=tmdb_id)
-#     user = request.user
-#     if movie.liked_users.filter(id=user.id).exists():
-#         movie.liked_users.remove(user)
-#         liked = False
-#     else:
-#         movie.liked_users.add(user)
-#         liked = True
-#     return Response({'liked': liked, 'like_count': movie.liked_users.count()})
+@permission_classes([IsAuthenticated])
 def toggle_movie_like(request, tmdb_id):
-    from django.contrib.auth import get_user_model
-    User = get_user_model()
-    user = User.objects.first()  # 인증 없이 첫 유저 사용
-
     movie = get_object_or_404(Movie, tmdb_id=tmdb_id)
-
+    user = request.user
+    
     if movie.liked_users.filter(id=user.id).exists():
         movie.liked_users.remove(user)
         liked = False
     else:
         movie.liked_users.add(user)
         liked = True
-
+        
     return Response({
         'liked': liked,
         'like_count': movie.liked_users.count()
@@ -72,142 +54,124 @@ def toggle_movie_like(request, tmdb_id):
 
 # ✅ 리뷰 목록 조회 및 생성
 @api_view(['GET', 'POST'])
-####임시 코드
-@permission_classes([AllowAny])
-####임시 코드
+@permission_classes([IsAuthenticatedOrReadOnly])
 def review_list_create(request, tmdb_id):
     movie = get_object_or_404(Movie, tmdb_id=tmdb_id)
     if request.method == 'GET':
         reviews = movie.reviews.all().order_by('-created_at')
         serializer = ReviewSerializer(reviews, many=True)
         return Response(serializer.data)
-    # elif request.method == 'POST':
-    #     serializer = ReviewSerializer(data=request.data)
-    #     if serializer.is_valid():
-    #         serializer.save(user=request.user, movie=movie)
-    #         return Response(serializer.data, status=201)
-    #     return Response(serializer.errors, status=400)
-    ####임시 코드
     elif request.method == 'POST':
-        from django.contrib.auth import get_user_model
-        User = get_user_model()
-        dummy_user = User.objects.first()  # 첫 번째 유저를 기본 유저로
-
         serializer = ReviewSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(user=dummy_user, movie=movie)  # 여기서 user 지정
-            return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=400)
-    ####임시 코드
+            serializer.save(user=request.user, movie=movie)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 # ✅ 리뷰 수정 및 삭제
 @api_view(['PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def review_detail(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
-    # if review.user != request.user:
-    #     return Response({'error': '권한이 없습니다.'}, status=403)
-
-    ####임시 코드
-    User = get_user_model()
-    dummy_user = User.objects.first()
-    if review.user != dummy_user:
-        return Response({'error': '권한이 없습니다.'}, status=403)
-    ####임시 코드
+    
+    # 리뷰 작성자만 수정/삭제 가능
+    if review.user != request.user:
+        return Response({'error': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
     
     if request.method == 'PUT':
         serializer = ReviewSerializer(review, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors, status=400)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
         review.delete()
-        return Response(status=204)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 # ✅ 리뷰 좋아요 기능
 @api_view(['POST'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def toggle_review_like(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
-    # user = request.user
-    # if review.likes.filter(id=user.id).exists():
-    #     review.likes.remove(user)
-    #     liked = False
-    # else:
-    #     review.likes.add(user)
-    #     liked = True
-    # return Response({'liked': liked, 'like_count': review.likes.count()})
-    ####임시 코드
+    user = request.user
     
-    User = get_user_model()
-    dummy_user = User.objects.first()
-
-    if review.likes.filter(id=dummy_user.id).exists():
-        review.likes.remove(dummy_user)
+    if review.likes.filter(id=user.id).exists():
+        review.likes.remove(user)
         liked = False
     else:
-        review.likes.add(dummy_user)
+        review.likes.add(user)
         liked = True
-
-    return Response({'liked': liked, 'like_count': review.likes.count()})
-    ####임시 코드
+        
+    return Response({
+        'liked': liked, 
+        'like_count': review.likes.count()
+    })
     
     
 # ✅ 리뷰 답글 조회 및 생성
-# @api_view(['GET', 'POST'])  
-# def review_reply_list_create(request, review_id):
-#     review = get_object_or_404(Review, pk=review_id)
-#     if request.method == 'GET':
-#         replies = review.replies.all().order_by('created_at')
-#         serializer = ReviewReplySerializer(replies, many=True)
-#         return Response(serializer.data)
-#     elif request.method == 'POST':
-#         serializer = ReviewReplySerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save(user=request.user, review=review)
-#             return Response(serializer.data, status=201)
-#         return Response(serializer.errors, status=400)
-####임시 코드
 @api_view(['GET', 'POST'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticatedOrReadOnly])
 def review_reply_list_create(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
-
-    if request.method == 'POST':
-        from django.contrib.auth import get_user_model
-        User = get_user_model()
-        dummy_user = User.objects.first()
-
+    
+    if request.method == 'GET':
+        replies = review.replies.all().order_by('created_at')
+        serializer = ReviewReplySerializer(replies, many=True)
+        return Response(serializer.data)
+        
+    elif request.method == 'POST':
         serializer = ReviewReplySerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(user=dummy_user, review=review)
-            return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=400)
-####임시 코드
+            serializer.save(user=request.user, review=review)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # ✅ 리뷰 답글 수정 및 삭제
 @api_view(['PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def review_reply_detail(request, reply_id):
     reply = get_object_or_404(ReviewReply, pk=reply_id)
-    # if reply.user != request.user:
-    #     return Response({'error': '권한이 없습니다.'}, status=403)
-    ####임시 코드
-    User = get_user_model()
-    dummy_user = User.objects.first()
-    if reply.user != dummy_user:
-        return Response({'error': '권한이 없습니다.'}, status=403)
-    ####임시 코드
+    
+    # 답글 작성자만 수정/삭제 가능
+    if reply.user != request.user:
+        return Response({'error': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
     
     if request.method == 'PUT':
         serializer = ReviewReplySerializer(reply, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors, status=400)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
         reply.delete()
-        return Response(status=204)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+# ✅ 사용자별 리뷰 목록 조회
+@api_view(['GET'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def user_reviews(request, username=None):
+    """
+    특정 사용자가 작성한 모든 리뷰를 조회합니다.
+    username이 제공되지 않으면 현재 로그인한 사용자의 리뷰를 반환합니다.
+    """
+    # username이 없으면 현재 로그인한 사용자의 리뷰 조회
+    if username is None and request.user.is_authenticated:
+        username = request.user.username
+    elif username is None:
+        return Response({'error': '사용자 이름이 필요합니다.'}, status=status.HTTP_400_BAD_REQUEST)
+    
+    # 사용자 존재 여부 확인
+    user = get_object_or_404(User, username=username)
+    
+    # 사용자가 작성한 모든 리뷰 조회 (최신순 정렬)
+    reviews = Review.objects.filter(user=user).order_by('-created_at')
+    
+    # 각 리뷰에 영화 정보를 포함하도록 serializer 컨텍스트 설정
+    serializer = ReviewSerializer(reviews, many=True, context={'include_movie': True})
+    
+    return Response(serializer.data)

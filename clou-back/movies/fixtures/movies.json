@@ -2,301 +2,541 @@
   {
     "model": "movies.movie",
     "fields": {
-      "title": "A MINECRAFT MOVIE 마인크래프트 무비",
-      "overview": "왕년의 게임 챔피언이었지만 지금은 폐업 직전의 게임샵 주인이 된 '개릿'과 엄마를 잃고 낯선 동네로 이사 온 남매 '헨리'와 '나탈리' 그리고 그들을 돕는 부동산 중개업자 '던'. 이들은 ‘개릿’이 수집한 ‘큐브’가 내뿜는 신비한 빛을 따라가다 어느 폐광 속에 열린 포털을 통해 미지의 공간으로 빨려들어간다. 산과 나무, 구름과 달, 심지어 꿀벌까지 상상하는 모든 것이 네모난 현실이 되는 이곳은 바로 ‘오버월드’. 일찍이 이 세계로 넘어와 완벽하게 적응한 ‘스티브’를 만난 네 사람은 지하세계 ‘네더’를 다스리는 마법사 ‘말고샤’의 침공으로 ‘오버월드’가 위험에 빠졌다는 사실을 알게 된다. 현실 세계로 돌아가기 위해서는 일단 살아남아야 하는 법! 다섯 명의 ‘동글이’들은 ‘오버월드’를 구하기 위해 힘을 합치게 되는데…",
-      "poster_path": "/k5aQ2TqKcQFwPoXHkpAGoKNVDLZ.jpg",
-      "release_date": "2025-03-31",
-      "tmdb_id": 950387
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
+      "tmdb_id": 574475,
       "title": "파이널 데스티네이션: 블러드라인",
       "overview": "끝없는 악몽에 시달리던 ‘스테파니’는 그 원인을 찾던 중  집안 대대로 내려오는 죽음의 저주와 그 실체를 알게 된다  놀랍게도, 죽음의 순서가 자신의 가족에게 이어졌음을 알게 되는데...  이제, 다음 차례는 누구?",
-      "poster_path": "/agaIglFrRGuUQOzkhzlrvcjJgt2.jpg",
-      "release_date": "2025-05-09",
-      "tmdb_id": 574475
+      "tagline": "죽음이 피보다 진하게 대물림된다",
+      "genres": "공포, 미스터리",
+      "production_countries": "United States of America",
+      "vote_average": 7.075,
+      "runtime": 110,
+      "original_language": "en",
+      "director": "Adam B. Stein, Zach Lipovsky",
+      "cast": "Kaitlyn Santa Juana, Teo Briones, Rya Kihlstedt, Richard Harmon, Owen Patrick Joyner",
+      "keywords": "restaurant, gore, sequel, premonition, fate, death, near-death experience, 1960s, cheating death, supernatural horror, horror, tense, intense, bold, teen scream",
+      "poster_path": "/agaIglFrRGuUQOzkhzlrvcjJgt2.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
-      "title": "워킹맨",
-      "overview": "전직 블랙 옵스 요원이었던 레본 케이드(제이슨 스타뎀)는 평범한 건설 노동자로 살아가며 딸과 함께 조용한 삶을 추구하고 있었으나 그의 상사의 딸이 인신매매 조직에 의해 납치되면서, 다시 과거의 전투 기술을 사용해 그녀를 구하기 위해 나서게 된다. 이 과정에서 시카고의 범죄 조직과 러시아 마피아와 얽히며, 부패와 폭력으로 가득 찬 어두운 세계를 마주하게 되는데...",
-      "poster_path": "/tK5sCN4cebvTt9MuSlNHehVQnYg.jpg",
-      "release_date": "2025-03-26",
-      "tmdb_id": 1197306
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "워페어",
-      "overview": "\"실화 기반, 전장의 숨결을 생생히 담아낸 리얼 타임 전쟁 드라마\"  2006년 이라크 라마디. 미 해군 특수부대 네이비 씰 팀이 적진 한복판에서 감시 임무를 수행하던 중, 예상치 못한 상황에 휘말리게 된다. 민가를 점거해 잠복하던 그들은 알카에다 세력의 포위망에 갇히고, 지원은 끊긴 채 생존을 위한 사투를 벌이게 된다. 전직 네이비 씰이자 실제 생존자인 레이 멘도자 감독과 '엑스 마키나', '시빌 워'의 알렉스 가란드 감독이 공동 연출한 이 작품은, 전투의 혼돈과 공포를 실시간으로 그려낸다. 화려한 음악이나 영웅 서사 없이, 전장의 소음과 침묵, 그리고 병사들의 숨결이 화면을 가득 채운다. 실화를 바탕으로 한 이 영화는, 전쟁의 참혹함과 인간의 생존 본능을 적나라하게 보여주며, 관객을 전장의 한가운데로 끌어들인다. 과연 이들은 살아남을 수 있을까...",
-      "poster_path": "/srj9rYrjefyWqkLc6l2xjTGeBGO.jpg",
-      "release_date": "2025-04-09",
-      "tmdb_id": 1241436
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
+      "tmdb_id": 447273,
       "title": "백설공주",
       "overview": "눈보라가 몰아치던 겨울 밤 태어난 백설공주. 온정이 넘치던 왕국에서 모두의 사랑을 받았지만, 강력한 어둠의 힘으로 왕국을 빼앗은 여왕의 위협에 숲으로 도망친다. 마법의 숲에서 간신히 살아남은 백설공주는 신비로운 일곱 광부들과 만나게 되며 새로운 세상을 마주하고, 마음속 깊이 숨겨진 용기와 선한 힘을 깨닫게 된다. 그리고 마침내, 빼앗긴 왕국을 되찾기 위해 여왕과 맞서 싸우기로 결심하는데…",
-      "poster_path": "/7EruTgYzDFM8kWhr2ysuuwoXFqk.jpg",
-      "release_date": "2025-03-12",
-      "tmdb_id": 447273
+      "tagline": "동화, 그 이상의 마법 같은 이야기",
+      "genres": "가족, 판타지",
+      "production_countries": "United States of America",
+      "vote_average": 4.301,
+      "runtime": 109,
+      "original_language": "en",
+      "director": "Marc Webb",
+      "cast": "Rachel Zegler, Gal Gadot, Andrew Burnap, Jeremy Swift, Jason Kravits",
+      "keywords": "princess, dwarf, fairy tale, poison, musical, apple, based on movie, evil queen, based on fairy tale, live action remake, clinical, fantasy, romantic fantasy, ridiculous",
+      "poster_path": "/7EruTgYzDFM8kWhr2ysuuwoXFqk.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
-      "title": "Bambi: A Life in the Woods",
-      "overview": "The life of Bambi, a male roe deer, from his birth through childhood, the loss of his mother, the finding of a mate, the lessons he learns from his father, and the experience he gains about the dangers posed by human hunters in the forest.",
-      "poster_path": "/vWNVHtwOhcoOEUSrY1iHRGbgH8O.jpg",
-      "release_date": "2024-10-16",
-      "tmdb_id": 1094473
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "사라진 탄환 3",
-      "overview": "복수의 여정을 끝내기 위해 돌아온 자동차 천재 리노. 자신의 인생을 망가뜨린 아레스키와 부패한 경정을 붙잡기 위한 추적에 나선다. 터보 엔진을 장착한 액션 삼부작의 완결편.",
-      "poster_path": "/cd8ThAWer67IvETRmRm3NZFdhU2.jpg",
-      "release_date": "2025-05-06",
-      "tmdb_id": 1144430
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
+      "tmdb_id": 575265,
       "title": "미션 임파서블: 파이널 레코닝",
       "overview": "디지털상의 모든 정보를 통제할 수 있는 사상 초유의 무기로 인해 전 세계 국가와 조직의 기능이 마비되고, 인류 전체가 위협받는 절체절명의 위기가 찾아온다. 이를 막을 수 있는 건 오직 존재 자체가 기밀인 에단 헌트와 그가 소속된 IMF뿐이다. 무기를 무력화하는 데 반드시 필요한 키를 손에 쥔 에단 헌트. 오랜 동료 루터와 벤지, 그리고 새로운 팀원이 된 그레이스, 파리, 드가와 함께 지금껏 경험했던 그 어떤 상대보다도 강력한 적에 맞서 모두의 운명을 건 불가능한 미션에 뛰어든다.",
-      "poster_path": "/5Zxdorl5TharlI9S47YxoKzGCsi.jpg",
-      "release_date": "2025-05-17",
-      "tmdb_id": 575265
+      "tagline": "모든 선택이 향하는 단 하나의 미션",
+      "genres": "액션, 모험, 스릴러",
+      "production_countries": "United States of America",
+      "vote_average": 7.0,
+      "runtime": 170,
+      "original_language": "en",
+      "director": "Christopher McQuarrie",
+      "cast": "Tom Cruise, Hayley Atwell, Ving Rhames, Simon Pegg, Esai Morales",
+      "keywords": "artificial intelligence (a.i.), diving, submarine, espionage, spy, nuclear missile, secret agent, stunt, sequel, terrorist plot, based on tv series",
+      "poster_path": "/5Zxdorl5TharlI9S47YxoKzGCsi.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
-      "title": "Conjuring the Cult",
-      "overview": "After discovering his blood-soaked daughter dead in the bathtub, David Bryson attends a self-help group to help save him from his ghostly nightmares. But when a group of mysterious cult-like women offer to help him resurrect his daughter. David's choices will not just decide his fate... but the fate of his dead daughter's SOUL.",
-      "poster_path": "/t4MiAeYpjL7saYvqvcn9xtOfA4K.jpg",
-      "release_date": "2024-10-01",
-      "tmdb_id": 1359977
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
+      "tmdb_id": 897160,
       "title": "용감한 시민",
       "overview": "불의는 못 본 척, 성질은 없는 척, 주먹은 약한 척 먹고 살기 위해 조용히 살아 온 기간제 교사 소시민. 법도 경찰도 무서울 것 하나 없는 안하무인 절대권력 한수강의 선을 넘는 행동을 목격하게 된다. 그의 계속되는 악행을 도저히 참을 수 없었던 그녀, 정체를 숨긴 채 통쾌한 한 방을 날리기로 마음 먹는데…",
-      "poster_path": "/oVJDtwC41sGx5zmWiEkhqwBlopD.jpg",
-      "release_date": "2023-10-25",
-      "tmdb_id": 897160
+      "tagline": "세상에서 참는 게 가장 쉬웠어요",
+      "genres": "액션, 드라마, 코미디",
+      "production_countries": "South Korea",
+      "vote_average": 7.0,
+      "runtime": 112,
+      "original_language": "ko",
+      "director": "Park Jin-pyo",
+      "cast": "Shin Hye-sun, Lee Jun-young, Park Jung-woo, Park Hyuk-kwon, Cha Chung-hwa",
+      "keywords": "secret identity, female fighter, female teacher, anti-bullying, female superhero, based on webcomic or webtoon, south korean",
+      "poster_path": "/oVJDtwC41sGx5zmWiEkhqwBlopD.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
+      "tmdb_id": 986056,
       "title": "썬더볼츠*",
       "overview": "어벤져스가 사라진 후, 세계 최대의 위협과 마주한 세상을 구하기 위해 전직 스파이, 암살자, 살인 청부 업자 등 마블의 별난 놈들이 펼치는 예측불허 팀플레이를 담은 액션 블록버스터",
-      "poster_path": "/1lI4iDsaVnOnnZPI9igWkL8jHPL.jpg",
-      "release_date": "2025-04-30",
-      "tmdb_id": 986056
+      "tagline": "누구와 팀이 될지 신중할 것",
+      "genres": "액션, SF, 모험",
+      "production_countries": "United States of America",
+      "vote_average": 7.467,
+      "runtime": 127,
+      "original_language": "en",
+      "director": "Jake Schreier",
+      "cast": "Florence Pugh, Sebastian Stan, Julia Louis-Dreyfus, Lewis Pullman, David Harbour",
+      "keywords": "new york city, villain, based on comic, mental health, aftercreditsstinger, duringcreditsstinger, marvel cinematic universe (mcu), congressman, reflective, father daughter relationship, impeachment, survivor's guilt, inspirational, antihero, ragtag, band of misfits, hilarious, bold",
+      "poster_path": "/1lI4iDsaVnOnnZPI9igWkL8jHPL.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
-      "title": "The Haunting at Saint Joseph's",
-      "overview": "An engaged Muslim doctor, her fiancé, and their friends go on a holiday at St. Joseph’s Guesthouse, unaware that it was the site of a sacrifice of an innocent centuries before. They soon come to believe that it's haunted and causing them to go crazy, as their emotions spiral out of control.",
-      "poster_path": "/eDzQFxs0KTzHUPkIR0c44TSGJUR.jpg",
-      "release_date": "2023-02-26",
-      "tmdb_id": 1092073
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "엑스테리토리얼",
-      "overview": "전직 특수부대 출신 군인 자라. 아들이 미국 영사관에서 흔적도 없이 사라지자, 아들을 찾기 위해 온힘을 쏟아붓고 그 과정에서 어두운 음모를 발견한다.",
-      "poster_path": "/s6BLJiER9pNRKGrVmqcue1OcBHb.jpg",
-      "release_date": "2025-04-29",
-      "tmdb_id": 1233069
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "인 더 로스트 랜즈",
-      "overview": "여왕은 강력하고 두려운 마법사 그레이 앨리스를 잃어버린 땅의 유령이 들끓는 황야로 보내 마법의 힘을 찾게 합니다. 그곳에서 그녀와 그녀의 안내자인 방랑자 보이스는 인간과 악마를 따돌리고 싸워야 합니다.",
-      "poster_path": "/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
-      "release_date": "2025-02-27",
-      "tmdb_id": 324544
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "러스트",
-      "overview": "\"그가 돌아온다, 서부 개척 시대의 처절한 생존 드라마\"\r 1882년 와이오밍 개척지, 13살 소년 루카스 홀리스터는 의도치 않은 사고로 현지 목장주를 죽이고 사형 선고를 받게 된다. 법의 심판을 피해 도망치던 그에게 유일한 희망은 오랫동안 소원했던 할아버지 밖에 없다. 험상궂고 무뚝뚝한 19세기 무법자 할아버지는 어쩔 수 없이 손자를 구하기 위해 나서게 된다. 웅장한 서부 풍경 속에서 펼쳐지는 카우보이와 무법자들의 이야기, 그리고 이 나라의 신화에 기초가 된 청교도적 도덕적 딜레마가 루카스와 그의 할아버지 앞에 놓인다. 피할 수 없는 과거의 그림자와 막다른 선택의 기로에서, 두 사람은 생존을 위한 처절한 여정을 시작하는데...",
-      "poster_path": "/tbJ3RkA2s6X5qrBzrYHYTxvDBui.jpg",
-      "release_date": "2025-05-01",
-      "tmdb_id": 710258
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "From the Shadows",
-      "overview": "When Dr. Joseph Cawl and members of his Hidden Wisdom cult die in a mysterious fire, survivors contact a paranormal expert to find the truth. What they discover makes them the next target of a deranged killer.",
-      "poster_path": "/22aFuf6UnDaGP9G5CLfF92Cj1nf.jpg",
-      "release_date": "2023-09-22",
-      "tmdb_id": 1180763
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "캡틴 아메리카: 브레이브 뉴 월드",
-      "overview": "대통령이 된 새디우스 로스와 재회 후, 국제적인 사건의 중심에 서게 된 샘이 전 세계를 붉게 장악하려는 사악한 음모 뒤에 숨겨진 존재와 이유를 파헤쳐 나가는 액션 블록버스터",
-      "poster_path": "/2MQdtfioyYSqgwkK07PSrBidOBC.jpg",
-      "release_date": "2025-02-12",
-      "tmdb_id": 822119
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
+      "tmdb_id": 1233413,
       "title": "씨너스: 죄인들",
       "overview": "1932년, 시카고 갱단의 생활을 정리하고 고향 미시시피로 돌아온 쌍둥이 형제 스모크와 스택은 큰돈을 벌기 위해 술집 주크 조인트를 운영하기로 한다. 화려한 오프닝 파티가 열리는 밤, 천부적인 재능을 지닌 새미의 노래로 파티의 열기는 점점 뜨거워지고 초대하지 않은 불청객 일행이 찾아오는데…",
-      "poster_path": "/5Tj7729s3MLmzNnAzaHSCWtzj5o.jpg",
-      "release_date": "2025-04-16",
-      "tmdb_id": 1233413
+      "tagline": "그날 밤, 우리는 악을 깨웠다!",
+      "genres": "공포, 스릴러",
+      "production_countries": "United States of America",
+      "vote_average": 7.563,
+      "runtime": 137,
+      "original_language": "en",
+      "director": "Ryan Coogler",
+      "cast": "Michael B. Jordan, Miles Caton, Hailee Steinfeld, Wunmi Mosaku, Jack O'Connell",
+      "keywords": "chicago, illinois, capitalism, ku klux klan, musician, immortality, vampire, surrealism, sin, alcoholism, vampire hunter (slayer), church, twins, estranged wife, dual role, cousin relationship, death of daughter, blues music, aftercreditsstinger, klansmen, 1990s, 1930s, salvation, assimilation, chinese immigrant, brother brother relationship, southern gothic, afro-descendants, cousins, supernatural horror, train station, juke joint, mississippi, sincere",
+      "poster_path": "/5Tj7729s3MLmzNnAzaHSCWtzj5o.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
-      "title": "Stream",
-      "overview": "Craven, a streamer with thousands of followers on a live streaming platform, has prepared a very special stream for Halloween. What no one expects when reacting to a video of Pentagram, a group of young paranormal investigators, is that the live experience will turn into the worst night of their lives. And maybe... the last.",
-      "poster_path": "/nnyjtBfUYA8ASHA9OhADrX0sMNQ.jpg",
-      "release_date": "2024-02-06",
-      "tmdb_id": 1260820
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "해벅",
-      "overview": "마약 절도 사건이 통제 불능으로 치닫는 상황. 지칠 대로 지친 경찰이 정치가의 아들을 구하기 위해 부패한 도시의 지하 범죄 세계와 싸우며 길을 헤쳐 나간다.",
-      "poster_path": "/oYUJsUlH0aoTNiKWJ78LD0cUVov.jpg",
-      "release_date": "2025-04-25",
-      "tmdb_id": 668489
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "Laila",
-      "overview": "Sonu Model, a renowned beautician from the old city, is forced to disguise himself as Laila, leading to a series of comedic, romantic, and action-packed events. Chaos ensues in this hilarious laugh riot",
-      "poster_path": "/l4gsNxFPGpzbq0D6QK1a8vO1lBz.jpg",
-      "release_date": "2025-02-14",
-      "tmdb_id": 1403735
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "데스 오브 유니콘",
-      "overview": "​\"그날 밤, 그들은 상상조차 못한 존재와 마주쳤다\"\r 과부인 엘리엇 킨터와 그의 딸 리들리는 캐나다 로키산맥으로 떠나는 길에 우연히 신비로운 새끼 유니콘과 충돌하게 된다. 이 사건으로 인해 그들은 엘리엇의 억만장자 상사인 오델 레오폴드의 별장에 도착하게 되고, 레오폴드 가족은 유니콘의 치유력을 탐내기 시작한다. 하지만 그들이 간과한 사실은, 유니콘의 부모가 그들의 새끼를 찾기 위해 다가오고 있다는 것인데...",
-      "poster_path": "/lXR32JepFwD1UHkplWqtBP1K79z.jpg",
-      "release_date": "2025-03-27",
-      "tmdb_id": 1153714
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
+      "tmdb_id": 1241982,
       "title": "모아나 2",
       "overview": "바다를 누볐던 선조들에게서 예기치 못한 부름을 받은 모아나가 마우이와 다시 만나 새로운 선원들과 함께 오랫동안 잊혀진 멀고 위험한 바다 너머로 떠나는 특별한 모험을 담은 이야기",
-      "poster_path": "/hwmwTFtMbzxAWbIOp1RyyiOCyx0.jpg",
-      "release_date": "2024-11-21",
-      "tmdb_id": 1241982
+      "tagline": "바다 저 너머 새로운 항해가 시작된다!",
+      "genres": "애니메이션, 모험, 가족, 코미디",
+      "production_countries": "Canada, United States of America",
+      "vote_average": 7.082,
+      "runtime": 100,
+      "original_language": "en",
+      "director": "David G. Derrick Jr., Jason Hand, Dana Ledoux Miller",
+      "cast": "Auliʻi Cravalho, Dwayne Johnson, Hualālai Chung, Rose Matafeo, David Fane",
+      "keywords": "sea, ocean, villain, musical, sequel, duringcreditsstinger",
+      "poster_path": "/hwmwTFtMbzxAWbIOp1RyyiOCyx0.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
-      "title": "¡Qué Huevos, Sofía!",
-      "overview": "Sofia gives everything for the company where she works, but the position she was promised is given to the owner's niece. She and other colleagues, tired of working for an unbearable boss, quit to start their own bakery. What they did not consider is that their ex-boss will not rest until he sees them fail.",
-      "poster_path": "/hhfWpdNmPwU1VV7zhNA1nOMbHkH.jpg",
-      "release_date": "2025-02-27",
-      "tmdb_id": 1233620
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "배드 인플루언스",
-      "overview": "감옥에서 출소한 이후, 스토커에게 시달리는 부유한 상속녀의 경호원으로 새출발하게 된 남자. 그런데 두 사람이 점점 가까워지면서, 서로에게 이끌리는 감정을 숨길 수 없게 된다.",
-      "poster_path": "/zkvC8gI8Mk0RIVrhaYrLr4cRWAO.jpg",
-      "release_date": "2025-01-24",
-      "tmdb_id": 1323784
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "Saint Catherine",
-      "overview": "An orphaned girl is rescued from a satanic ritual and taken to Saint Catherine Institute for homeless youth. There she will learn new skills while facing demons that stalk her.",
-      "poster_path": "/hBJdzKPeDaC96AzlrtMWBomYSZV.jpg",
-      "release_date": "2024-09-24",
-      "tmdb_id": 1356236
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "더 몽키",
-      "overview": "\"공포의 근원, 악을 품은 인형의 저주\"\r 쌍둥이 형제 빌과 테드는 할아버지의 유품 정리 중 오래된 원숭이 장난감을 발견한다. 심벌즈를 치는 이 원숭이 인형은 어린 시절 그들에게 공포의 대상이었지만, 이제 어른이 된 두 형제는 그것을 단순한 장난감으로 치부한다. 하지만 인형이 다시 집에 들어오자 기이한 사건들이 연이어 발생하기 시작한다. 어린 시절의 트라우마가 되살아나고, 원숭이 인형을 둘러싼 끔찍한 비밀이 드러나며 형제의 삶은 걷잡을 수 없는 혼돈 속으로 빠져드는데...",
-      "poster_path": "/yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg",
-      "release_date": "2025-02-14",
-      "tmdb_id": 1124620
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
-      "title": "보석 도둑: 더 하이스트 비긴스",
-      "overview": "기발한 사기꾼 레한이 잔혹한 라이벌 라잔을 따돌리기 위해 치밀한 다이아몬드 강탈 작전을 계획한다. 치열한 두뇌 싸움과 긴장감 넘치는 전개가 돋보이는 작품.",
-      "poster_path": "/miJvhfYMvPymG75Gl4q0QatyNBk.jpg",
-      "release_date": "2025-04-24",
-      "tmdb_id": 1225915
-    }
-  },
-  {
-    "model": "movies.movie",
-    "fields": {
+      "tmdb_id": 762509,
       "title": "무파사: 라이온 킹",
       "overview": "길을 잃고 혼자가 된 새끼 사자 무파사는 광활한 야생을 떠돌던 중 왕의 혈통이자 예정된 후계자 타카와 우연히 만나게 된다. 마치 친형제처럼 끈끈한 우애를 나누며 함께 자란 무파사와 타카는 운명을 개척하기 위해 거대한 여정을 함께 떠난다. 한 치 앞을 알 수 없는 적들의 위협 속에서 두 형제의 끈끈했던 유대에 금이 가기 시작하고 예상치 못한 위기까지 맞닥뜨리게 되는데…",
-      "poster_path": "/1VUExee8iFohFTwYVi4IOArYyaM.jpg",
-      "release_date": "2024-12-18",
-      "tmdb_id": 762509
+      "tagline": "하나의 왕좌, 엇갈린 운명",
+      "genres": "모험, 가족, 애니메이션",
+      "production_countries": "United States of America",
+      "vote_average": 7.396,
+      "runtime": 118,
+      "original_language": "en",
+      "director": "Barry Jenkins",
+      "cast": "Aaron Pierre, Kelvin Harrison, Jr., Tiffany Boone, Kagiso Lediga, Preston Nyman",
+      "keywords": "friendship, paradise, lion, musical, prequel, jungle, told in flashback, betrayal by friend, chance meeting, live action remake, found family, lost",
+      "poster_path": "/1VUExee8iFohFTwYVi4IOArYyaM.jpg"
     }
   },
   {
     "model": "movies.movie",
     "fields": {
+      "tmdb_id": 9532,
       "title": "데스티네이션",
       "overview": "알렉스 브라우닝은 그의 고등학교 불어반 친구들과 파리로 출발하려는 순간, 비행기안에서 강렬한 환영을 경험하게 된다. 바로 비행기가 출발과 동시에 폭발하는 모습을 생생하게 본 것. 그는 모두 곧 비행기에서 내릴 것을 주장하고, 한차례 혼란이 있은 후에 알렉스를 포함한 7명이 비행기에서 내리게 된다. 공항 라운지로 돌아왔을 때, 알렉스와 그의 친구인 빌리와 토드, 알렉스를 본능적으로 따른 클레어, 알렉스를 비웃음거리로 만들려는 카터와 그녀의 여자친구 테리, 그리고 학생보호를 위하여 비행기에서 내린 류턴 선생까지 7명의 사람들은 엄청난 비행기 폭발을 직접 목격한다. 하지만 사건후 오히려 생존자들은 알렉스의 무시무시한 예지력에 공포를 느끼고, 또한 FBI는 그에게 의혹의 눈초리를 보낸다. 스스로 혼란에 빠진 알렉스는 어찌되었든 그를 비롯한 생존자들이 쉽게 말해서 자신들에게 다가온 죽음의 운명을 속였고, 이러한 자신들의 운명이 오래가지 못함을 알게 된다. 하지만 클레어를 제외한 생존자중 누구도 알렉스를 믿지않고, 이들에게 죽음의 사신이 다가온다.",
-      "poster_path": "/kPqTDpKN3lkteEV1OegqpZ6GHL6.jpg",
-      "release_date": "2000-03-17",
-      "tmdb_id": 9532
+      "tagline": "바꾸려 하지마라! 죽음은 예정대로 움직인다!",
+      "genres": "공포",
+      "production_countries": "United States of America",
+      "vote_average": 6.617,
+      "runtime": 98,
+      "original_language": "en",
+      "director": "James Wong",
+      "cast": "Devon Sawa, Ali Larter, Kerr Smith, Kristen Cloke, Daniel Roebuck",
+      "keywords": "airport, time travel, omen, premonition, airplane accident, airplane crash, corpse, death, macabre, near-death experience, desperate, cheating death, supernatural horror, horror, cliché, teen scream",
+      "poster_path": "/kPqTDpKN3lkteEV1OegqpZ6GHL6.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 552524,
+      "title": "릴로 & 스티치",
+      "overview": "보송보송한 파란 솜털, 호기심 가득한 큰 눈, 장난기 가득한 웃음을 가졌지만..! 가장 위험한 실험체 취급을 받던 ‘스티치’는 우주에서 도망쳐 지구의 하와이 섬에 불시착하게 된다. 단짝 친구를 원하던 외톨이 소녀 ‘릴로’는 별똥별과 함께 나타난 귀여운 파란색 강아지(?) ‘스티치’와 소중한 친구이자, 하나의 가족이 되어가며 외로웠던 일상이 유쾌하게 변하기 시작한다. 그러던 어느 날, ‘스티치’를 잡아 우주로 되돌아가려는 정체불명의 요원들이 등장하고 ‘릴로’와 ‘스티치’는 예상치 못한 상황을 마주하게 되는데..!",
+      "tagline": "사랑으로 꽉~찬! 나만의 특별한 가족♥",
+      "genres": "가족, 코미디, SF",
+      "production_countries": "United States of America",
+      "vote_average": 7.032,
+      "runtime": 107,
+      "original_language": "en",
+      "director": "Dean Fleischer Camp",
+      "cast": "Maia Kealoha, Sydney Agudong, Chris Sanders, Zach Galifianakis, Billy Magnussen",
+      "keywords": "affectation, family, orphan siblings, extraterrestrial animal, live action remake, animal human friendship, hilarious, adoring, excited",
+      "poster_path": "/ww7jn7lv1YzTAGd5m0R6CP1VXAs.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 55779,
+      "title": "파이널 데스티네이션 5",
+      "overview": "1박 2일의 워크숍을 떠나는 버스 안에서 다리가 붕괴되는 끔찍한 사고로 자신과 동료들을 비롯해 수많은 이들이 죽는 환영을 본 샘. 곧이어 거짓말처럼 실제로 사고가 재현되고, 혼란 속에서 최대한 많은 사람들을 구해낸다. 그러나 그들은 죽었어야 하는 운명! 어김없이 찾아온 사신과의 싸움을 시작한 그들은 마침내 “타인의 생명을 이용하면 살아날 수 있다”는 달라진 죽음의 규칙을 찾아 내는데…",
+      "tagline": "아직도 살아있는가? 죽음의 규칙이 달라졌다!",
+      "genres": "공포, 미스터리",
+      "production_countries": "United States of America",
+      "vote_average": 6.126,
+      "runtime": 91,
+      "original_language": "en",
+      "director": "Steven Quale",
+      "cast": "Nicholas D'Agosto, Emma Bell, Miles Fisher, Ellen Wroe, Jacqueline MacInnes Wood",
+      "keywords": "premonition, accidental death, crash, end is here, death, duringcreditsstinger, cheating death, suspension bridge, supernatural horror, 3d, horror, twist ending, teen scream",
+      "poster_path": "/5sRZVerkpfZmyBqgma6v0qMlvUA.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 1195506,
+      "title": "노보케인",
+      "overview": "평범한 외모, 평범한 성격, 평범한 직업, 이보다 더 평범할 수 없는 은행원 ‘네이선 케인’은 남들과 다른 비밀을 숨기고 있다. 그것은 바로 선천성 무통각증으로 신체적 고통을 전혀 느끼지 못한다는 것. 첫눈에 반한 직장 동료 ‘셰리’와 완벽한 첫 데이트 후 설레는 마음도 잠시, 은행에 들이닥친 무장 강도단에게 ‘셰리’가 인질로 납치되고 만다. 오직 그녀를 구하겠다는 마음으로 강도를 쫓던 ‘네이선’은 자신의 특별한 능력(?)을 사용해 온몸을 무기 삼아 극한의 위험 속에 뛰어드는데…",
+      "tagline": "고통을 느끼지 못하는 남자",
+      "genres": "액션, 코미디, 스릴러",
+      "production_countries": "United States of America",
+      "vote_average": 6.898,
+      "runtime": 110,
+      "original_language": "en",
+      "director": "Dan Berk, Robert Olsen",
+      "cast": "Jack Quaid, Amber Midthunder, Ray Nicholson, Jacob Batalon, Betty Gabriel",
+      "keywords": "pain, dark comedy, bank robbery, held hostage, speculative, curious, frantic, mischievous, playful, casual, comedy thriller, incredulous, hilarious, comedy, action, whimsical, amused, audacious, defiant, dubious, farcical, super hero, one-person film, car chase",
+      "poster_path": "/dVi5wC7pctrEd6vOWoteIrm3d6s.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 1249213,
+      "title": "드롭",
+      "overview": "몇 년 만의 데이트에 나선 싱글맘 바이올렛. 데이트 상대인 헨리와 즐거운 식사를 하던 도중 같은 레스토랑에 있는 누군가로부터 의문의 메시지를 받게 된다. 단순한 장난으로 치부하며 넘기려는 그녀에게 헨리를 죽이지 않으면 자신의 아들이 죽는다는 협박이 이어지고 이내 공포에 빠진 그녀는 익명의 위협에서 벗어나기 위해 고군분투하는데...",
+      "tagline": "이 안에 있는 모두가 용의자다",
+      "genres": "미스터리, 스릴러",
+      "production_countries": "United States of America",
+      "vote_average": 6.513,
+      "runtime": 95,
+      "original_language": "en",
+      "director": "Christopher Landon",
+      "cast": "Meghann Fahy, Brandon Sklenar, Violett Beane, Jacob Robinson, Reed Diamond",
+      "keywords": "mother, photographer, date, poison, widow, restaurant, psychological thriller, whodunit, phone, murder mystery, thriller, hum, threatening behavior",
+      "poster_path": "/l7Xj2XB7tRg1UqF4x5Prlc2LssQ.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 950396,
+      "title": "'더 캐니언' - The Gorge",
+      "overview": "고도의 훈련을 받은 두 요원는 비밀스러운 협곡의 양쪽을 지키는 임무를 받은 후 멀리서 서로와 서서히 친해진다. 도사리고 있던 악이 드러나자, 둘은 협곡 안의 위험으로부터 살아남기 위해 협력해야만 한다.",
+      "tagline": "두 요원 사이에 놓인 세상에서 가장 위험한 비밀.",
+      "genres": "로맨스, SF, 스릴러",
+      "production_countries": "United States of America",
+      "vote_average": 7.7,
+      "runtime": 127,
+      "original_language": "en",
+      "director": "Scott Derrickson",
+      "cast": "Miles Teller, Anya Taylor-Joy, Sigourney Weaver, Ṣọpẹ́ Dìrísù, William Houston",
+      "keywords": "canyon, fog, romance, tower, elite sniper, snipers, long-term observation",
+      "poster_path": "/fhPj5pWbCoVoz8sehfaCeIWWFxc.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 1184918,
+      "title": "와일드 로봇",
+      "overview": "우연한 사고로 거대한 야생에 불시착한 로봇 로즈는 주변 동물들의 행동을 배우며 낯선 환경 속에 적응해 가던 중, 사고로 세상에 홀로 남겨진 아기 기러기 브라이트빌의 보호자가 된다. 로즈는 입력되어 있지 않은 새로운 역할과 관계에 낯선 감정을 마주하고 겨울이 오기 전에 남쪽으로 떠나야 하는 브라이트빌을 위해 동물들의 도움을 받아 이주를 위한 생존 기술을 가르쳐준다. 그러나 선천적으로 몸집이 작은 브라이트빌은 짧은 비행도 힘겨워 하는데...",
+      "tagline": "너를 통해 더 넓은 세상을 만나다",
+      "genres": "애니메이션, SF, 가족",
+      "production_countries": "United States of America",
+      "vote_average": 8.316,
+      "runtime": 102,
+      "original_language": "en",
+      "director": "Chris Sanders",
+      "cast": "Lupita Nyong'o, Pedro Pascal, Kit Connor, Bill Nighy, Stephanie Hsu",
+      "keywords": "villain, robot, based on children's book, female villain, aftercreditsstinger, duringcreditsstinger, kids, adopted son, calm, complex, traditional parenting, empathetic, enchant, euphoric",
+      "poster_path": "/8dkuf9IuVh0VZjDTk7kAY67lU0U.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 912649,
+      "title": "베놈: 라스트 댄스",
+      "overview": "환상의 케미스트리의 에디 브록과 그의 심비오트 베놈은 그들을 노리는 정체불명 존재의 추격을 피해 같이 도망을 다니게 된다. 한편 베놈의 창조자 널은 고향 행성에서부터 그들을 찾아내기 위해 지구를 침략하고 에디와 베놈은 그동안 겪어보지 못한 최악의 위기를 맞이하게 되는데…",
+      "tagline": "죽음이 갈라놓을 때까지",
+      "genres": "액션, SF, 모험",
+      "production_countries": "United States of America",
+      "vote_average": 6.739,
+      "runtime": 109,
+      "original_language": "en",
+      "director": "Kelly Marcel",
+      "cast": "Tom Hardy, Chiwetel Ejiofor, Juno Temple, Rhys Ifans, Stephen Graham",
+      "keywords": "hero, superhero, anti hero, villain, alien life-form, based on comic, sequel, aftercreditsstinger, woman director, angry, amused, indifferent",
+      "poster_path": "/ptfoRD0MmL8Ry0iBVccYbqoN9Xc.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 575264,
+      "title": "미션 임파서블: 데드 레코닝",
+      "overview": "모든 인류를 위협할 새로운 무기를 추적하게 된 에단 헌트와 IMF팀은 이 무기가 인류의 미래를 통제할 수 있다는 사실을 알게 된다. 전 세계가 위태로운 상황에 처한 가운데, 이를 추적하던 에단 헌트에게 어둠의 세력까지 접근하고 마침내 미스터리하고 강력한 빌런과 마주하게 된 그는 가장 위험한 작전을 앞두고 자신이 아끼는 사람들의 생명과 중요한 임무 사이에서 선택을 해야 하는 상황에 놓이게 되는데…",
+      "tagline": "가장 위험한 작전, 그의 마지막 선택",
+      "genres": "액션, 모험, 스릴러",
+      "production_countries": "United States of America",
+      "vote_average": 7.535,
+      "runtime": 164,
+      "original_language": "en",
+      "director": "Christopher McQuarrie",
+      "cast": "Tom Cruise, Hayley Atwell, Ving Rhames, Simon Pegg, Rebecca Ferguson",
+      "keywords": "race against time, mission, rome, italy, chase, secret mission, secret agent, sequel, intelligence agency, rogue agent, based on tv series, secret government agency, northern norway, action",
+      "poster_path": "/dIcLgXA6R54EZ0XPSMKW4XDNCAA.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 9358,
+      "title": "데스티네이션 2",
+      "overview": "친구들과 주말여행을 떠나던 킴벌리는 고속도로 연쇄 충돌 사고로 자신을 포함한 많은 사람들이 끔찍하게 죽는 환상을 보게 된다. 환상에서 본 조짐들은 하나하나 현실이 되고 공포에 질린 그녀는 다른 차들의 국도 진입을 막지만 아무도 그 말을 믿으려 하지 않는다. 하지만 예견했던 대형 사고가 실제로 일어나자 이를 지켜보던 사람들은 경악을 금치 못한다. 안도의 한숨도 잠시, 화염에 휩싸인 트럭이 킴벌리의 차를 덮치면서 그녀를 제외한 친구들은 모두 목숨을 잃게 되는데.  단지 이것이 시작일 뿐이라는 것을 직감한 킴벌리는 이번 사고가 1년 전 180기 폭발사고의 생존자들이 겪은 죽음과 연관되어 있음을 알게 되고 180기 사고의 유일한 생존자 클레어를 찾아가 도움을 구한다. 킴벌리와 클레어, 그리고 나머지 생존자들은 다시 시작된 죽음의 맞서 그 해답을 찾으려 하지만 전혀 다른 법칙과 예상치 못한 방법으로 다가오는 죽음은 그들을 더욱 공포에 떨게 만든다 .점점 빠르게 다가오는 공포의 검은 그림자. 과연 그들은 죽음과의 숨막히는 게임에서 살아 남을 수 있을 것인가?",
+      "tagline": "아직도 살아있는가!",
+      "genres": "공포, 미스터리",
+      "production_countries": "United States of America",
+      "vote_average": 6.276,
+      "runtime": 90,
+      "original_language": "en",
+      "director": "David R. Ellis",
+      "cast": "Ali Larter, A. J. Cook, Michael Landes, David Paetkau, James Kirk",
+      "keywords": "ambulance, car crash, premonition, vision, hospital, death, cheating death, supernatural horror, horror, apathetic, indifferent, teen scream",
+      "poster_path": "/3OdyCaz3tRJhY4JeZwHd0nG6jNw.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 1078600,
+      "title": "Marked Men: Rule + Shaw",
+      "overview": "Shaw Landon has loved Rule Archer from the moment she laid eyes on him. Rule, a fiery-tempered rebel tattoo artist, doesn’t have time for a good girl pre-med student like Shaw — even if she’s the only one who can see the person he truly is. She lives by other people’s rules; he makes his own. But a short skirt, too many birthday cocktails, and spilled secrets lead to a night neither can forget. Now, Shaw and Rule must figure out how a girl like her and a guy like him are supposed to be together without destroying their love…or each other.",
+      "tagline": "Love always leaves a mark.",
+      "genres": "Romance, Drama",
+      "production_countries": "United States of America",
+      "vote_average": 6.384,
+      "runtime": 93,
+      "original_language": "en",
+      "director": "Nick Cassavetes",
+      "cast": "Chase Stokes, Sydney Taylor, Ella Balinska, Evan Mock, Alexander Ludwig",
+      "keywords": "based on novel or book, bad boy, romantic drama",
+      "poster_path": "/gZQU8BtCH2IbMZq6QETiU4HXQSR.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 696506,
+      "title": "미키 17",
+      "overview": "친구 티모와 함께 차린 마카롱 가게가 쫄딱 망해 거액의 빚을 지고 못 갚으면 죽이겠다는 사채업자를 피해 지구를 떠나야 하는 미키. 기술이 없는 그는, 정치인 마셜의 얼음행성 개척단에서 위험한 일을 도맡고, 죽으면 다시 프린트되는 익스펜더블로 지원한다. 4년의 항해와 얼음행성 니플하임에 도착한 뒤에도 늘 미키를 지켜준 여자친구 나샤. 그와 함께, 미키는 반복되는 죽음과 출력의 사이클에도 익숙해진다. 그러나 미키 17이 얼음행성의 생명체인 크리퍼와 만난 후 죽을 위기에서 돌아와 보니 이미 미키 18이 프린트되어 있다. 행성 당 1명만 허용된 익스펜더블이 둘이 된 멀티플 상황. 둘 중 하나는 죽어야 하는 현실 속에 걷잡을 수 없는 사건이 기다리고 있었으니…",
+      "tagline": "오늘도 죽으러 갑니다, 인류를 위해",
+      "genres": "SF, 코미디, 모험",
+      "production_countries": "United States of America, United Kingdom",
+      "vote_average": 6.907,
+      "runtime": 137,
+      "original_language": "en",
+      "director": "Bong Joon Ho",
+      "cast": "Robert Pattinson, Naomi Ackie, Steven Yeun, Mark Ruffalo, Toni Collette",
+      "keywords": "based on novel or book, dark comedy, space travel, space colony, alien planet, creature, space adventure, human cloning, spaceship, space sci-fi, black comedy",
+      "poster_path": "/7KghOYtsxFquUuw4THbARsSEo6g.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 933260,
+      "title": "서브스턴스",
+      "overview": "한때 아카데미상을 수상하고 명예의 거리까지 입성한 대스타였지만 지금은 TV 에어로빅 쇼 진행자로 전락한 엘리자베스. 50살이 되던 날, 프로듀서에게서 어리고 섹시하지 않다는 이유로 해고를 당한다. 돌아가던 길에 차 사고로 병원에 실려간 엘리자베스는 매력적인 남성 간호사로부터 서브스턴스라는 약물을 권유받는다. 한 번의 주사로 젊고 아름답고 완벽한 수가 탄생하는데...",
+      "tagline": "더 나은 당신을 꿈꿔본 적 있는가?",
+      "genres": "공포, SF",
+      "production_countries": "France, United Kingdom, United States of America",
+      "vote_average": 7.138,
+      "runtime": 140,
+      "original_language": "en",
+      "director": "Coralie Fargeat",
+      "cast": "Demi Moore, Margaret Qualley, Dennis Quaid, Edward Hamilton-Clark, Gore Abrams",
+      "keywords": "new year's eve, capitalism, black market, identity, beauty, satire, aging, celebrity, female protagonist, los angeles, california, biting, has been, aerobics, disfigurement, woman director, angry, grim, beauty standards, satirical, insecure woman, toxic masculinity, drug, body horror, female rage, youth, actress, farcical, ghoulish, sardonic",
+      "poster_path": "/oUkeyrXvGUEylOQtlYMv9esNRiu.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 9286,
+      "title": "파이널 데스티네이션",
+      "overview": "고등학교 졸업을 앞두고 인생의 황금기를 즐기고 있는 웬디. 웬디는 친구들과 함께 졸업 기념으로 놀이공원에 놀러 가기로 한다. 놀이공원의 하이라이트 롤러코스터에 타려는 순간, 웬디는 갑자기 불길한 예감에 휩싸인다. 남자친구인 제이슨은 신경과민이라며 그녀를 안심시키지만, 롤러코스터에 앉아 안전벨트가 내려오자마자 자신과 친구들 모두가 탄 롤러코스터가 끔찍한 사고로 전복되는 장면이 웬디의 눈앞에 생생히 스쳐간다.  롤러코스터가 출발하기 직전 이 섬뜩한 환상에서 깬 웬디는 겁에 질려 열차에서 내리려 하고 그녀의 옆자리에 앉아있던 케빈도 이런 웬디를 보고 따라 내리게 된다. 두 사람을 겁쟁이라고 놀리는 같은 반 친구 루이스. 말싸움은 주먹다짐으로 번지고 롤러코스터가 아수라장이 되자 이들은 모두 열차에서 쫓겨나고 만다. 어수선한 가운데 롤러코스터가 출발하고, 이를 지켜보던 웬디의 눈앞에서 그녀의 악몽 같은 예감은 현실로 드러난다. 엄청난 속도로 질주하던 롤러코스터가 탈선해 사람들이 모두 땅으로 곤두박질친 것. 하지만 이건 시작에 불과하다!",
+      "tagline": "멈출 수 있는가? 죽음을 부르는 7개의 징후",
+      "genres": "공포, 미스터리",
+      "production_countries": "United States of America",
+      "vote_average": 6.121,
+      "runtime": 92,
+      "original_language": "en",
+      "director": "James Wong",
+      "cast": "Mary Elizabeth Winstead, Ryan Merriman, Kris Lemche, Alexz Johnson, Sam Easton",
+      "keywords": "dying and death, stroke of fate, beheading, omen, premonition, burned alive, fate, death, roller coaster / rollercoaster, cheating death, emo, supernatural horror, amusement parks, suspenseful, horror, teens, teen scream, supernatural slasher",
+      "poster_path": "/gGSZPvotlWff9CE2eqNTBkzxIYl.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 19912,
+      "title": "파이널 데스티네이션 4",
+      "overview": "자동차 레이싱 대회 관중석에 앉아있던 닉은 갑자기 불길한 전조를 본다. 레이싱 카들이 연쇄 충돌을 일으켜 날아온 파편에 친구들이 죽고 무너진 건물이 자기를 덮치는 끔찍한 환상! 악몽에서 깨어난 닉이 친구들을 끌고 경기장을 막 빠져 나온 찰나, 닉의 환상은 현실로 이어진다. 닉과 친구들은 아슬아슬하게 죽음을 피하지만 이는 시작에 불과했다. 불길한 죽음의 환상은 계속해서 닉을 찾아오고, 사고에서 살아남은 사람들은 갈수록 끔찍한 방법으로 차례차례 죽음을 맞는다. 닉은 친구들의 죽음을 막으려 하지만 자신도 마지막 운명에 이르기 전에 다시 한번 죽음에서 벗어날 방법을 찾아야만 한다!",
+      "tagline": "죽음과 맞서라!",
+      "genres": "공포, 미스터리",
+      "production_countries": "United States of America",
+      "vote_average": 5.609,
+      "runtime": 82,
+      "original_language": "en",
+      "director": "David R. Ellis",
+      "cast": "Bobby Campo, Shantel VanSanten, Nick Zano, Haley Webb, Mykelti Williamson",
+      "keywords": "dying and death, plan, car race, gore, stock car racing, car crash, premonition, vision, death, cheating death, supernatural horror, horror, teen scream",
+      "poster_path": "/pRckgFI7EhfrkyXgczs93erGWEo.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 558449,
+      "title": "글래디에이터 II",
+      "overview": "로마의 영웅이자 최고의 검투사였던 막시무스가 콜로세움에서 죽음을 맞이한 뒤 20여 년이 흐른 후. 쌍둥이 황제 게타와 카라칼라의 폭압 아래 시민을 위한 자유로운 나라 로마의 꿈은 잊힌 지 오래다. 한편 아카시우스 장군이 이끄는 로마군에 대패한 후 모든 것을 잃고 노예로 전락한 루시우스는 강한 권력욕을 지닌 마크리누스의 눈에 띄어 검투사로 발탁된다. 로마를 향한 걷잡을 수 없는 분노, 타고난 투사의 기질로 콜로세움에 입성하게 된 루시우스는 결투를 거듭하며 자신이 진짜 누구인지 알게 되고 마침내 로마의 운명을 건 결전을 준비하게 되는데...!",
+      "tagline": "역사로 기억될 새로운 반란이 시작된다!",
+      "genres": "액션, 모험, 드라마",
+      "production_countries": "United States of America",
+      "vote_average": 6.74,
+      "runtime": 148,
+      "original_language": "en",
+      "director": "Ridley Scott",
+      "cast": "Paul Mescal, Denzel Washington, Pedro Pascal, Connie Nielsen, Joseph Quinn",
+      "keywords": "epic, gladiator, roman empire, ancient rome, sequel, evil tyrant, sword and sandal, sword fighting, second part, arrogant",
+      "poster_path": "/b5UXjzW5cLZhprMnlAmsVAA3G4t.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 974576,
+      "title": "콘클라베",
+      "overview": "교황의 예기치 못한 죽음 이후 새로운 교황을 선출하는 콘클라베가 시작되고, 로렌스는 단장으로서 선거를 총괄하게 된다. 한편 당선에 유력했던 후보들이 스캔들에 휘말리면서 교활한 음모와 탐욕이 수면 위로 드러나는데…",
+      "tagline": "제가 무엇보다 두려워하는 죄는 확신입니다",
+      "genres": "드라마, 스릴러, 미스터리",
+      "production_countries": "United Kingdom, United States of America",
+      "vote_average": 7.186,
+      "runtime": 120,
+      "original_language": "en",
+      "director": "Edward Berger",
+      "cast": "Ralph Fiennes, Stanley Tucci, John Lithgow, Isabella Rossellini, Lucian Msamati",
+      "keywords": "vatican (holy see), pope, religion, election, roman catholic church, catholicism, questioning, cardinal, papal conclave, catholic monarchs",
+      "poster_path": "/aPPUy4JBYrJeRlQwMxdKwa3Ozkd.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 1022789,
+      "title": "인사이드 아웃 2",
+      "overview": "13살이 된 라일리의 행복을 위해 매일 바쁘게 머릿속 감정 컨트롤 본부를 운영하는 ‘기쁨’, ‘슬픔’, ‘버럭’, ‘까칠’, ‘소심’. 그러던 어느 날, 낯선 감정인 ‘불안’, ‘당황’, ‘따분’, ‘부럽’이가 본부에 등장하고, 언제나 최악의 상황을 대비하며 제멋대로인 ‘불안’이와 기존 감정들은 계속 충돌한다. 결국 새로운 감정들에 의해 본부에서 쫓겨나게 된 기존 감정들은 다시 본부로 돌아가기 위해 위험천만한 모험을 시작하는데…",
+      "tagline": "비상! 새로운 감정들이 몰려온다!",
+      "genres": "애니메이션, 모험, 코미디, 가족",
+      "production_countries": "United States of America",
+      "vote_average": 7.554,
+      "runtime": 97,
+      "original_language": "en",
+      "director": "Kelsey Mann",
+      "cast": "Amy Poehler, Maya Hawke, Kensington Tallman, Liza Lapira, Tony Hale",
+      "keywords": "sadness, disgust, sequel, computer animation, teenage girl, fear, anger, envy, aftercreditsstinger, duringcreditsstinger, emotions, embarrasment, anxious, joy, anxiety, cliché",
+      "poster_path": "/x2BHx02jMbvpKjMvbf8XxJkYwHJ.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 519182,
+      "title": "슈퍼배드 4",
+      "overview": "슈트-업 하고 악당 전담 처리반 AVL이 된 에이전트 미니언즈와 미니언즈 만큼 귀여운 그루 주니어가 태어나면서 더욱 완벽해진 그루 패밀리. 이들 앞에 과거 그루의 고등학교 동창이자 그에게 체포당했던 빌런 맥심이 등장하고, 오직 그루를 향한 복수심에 불타올라 탈옥까지 감행한 맥심은 그루 패밀리의 뒤를 바짝 추격하며 위협을 가하기 시작하는데... 과연 에이전트 미니언즈와 그루 패밀리는 맥심을 막아낼 수 있을까?",
+      "tagline": "올여름은 우리가 씹어 먹는다!",
+      "genres": "애니메이션, 가족, 코미디, SF",
+      "production_countries": "United States of America",
+      "vote_average": 7.043,
+      "runtime": 94,
+      "original_language": "en",
+      "director": "Chris Renaud",
+      "cast": "Steve Carell, Kristen Wiig, Will Ferrell, Sofía Vergara, Miranda Cosgrove",
+      "keywords": "superhero, villain, sequel, super villain, aftercreditsstinger, duringcreditsstinger, kids, calm, illumination",
+      "poster_path": "/vZmCFVff9JySHTUp9zbYUIAcxzc.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 1064486,
+      "title": "달팽이의 회고록",
+      "overview": "'그레이스'는 자신의 달팽이, '실비아'에게 살아온 이야기를 시작한다. 잦은 병치레, 수면무호흡증으로 언제 위험해질지 모르는 알코올 중독자 아빠, 또래 친구들의 괴롭힘… 씁쓸한 유년 시절 유일한 빛이자 영웅이 되어준 건 쌍둥이 '길버트'이다. 하지만 서로 다른 지역으로 입양돼 헤어지게 되며 서로에 대한 그리움으로 하루하루를 살아나간다. 계속되는 잔잔하고도 외로운 일상 속, 우연히 ‘핑키’라는 괴짜 할머니를 만나 우정을 쌓게 되고 그레이스는 다시금 인생의 희망을 찾아가기 시작하는데…",
+      "tagline": "\"이제 너도 그 껍질에서 나올 차례야\"",
+      "genres": "애니메이션, 드라마, 코미디",
+      "production_countries": "Australia",
+      "vote_average": 8.068,
+      "runtime": 94,
+      "original_language": "en",
+      "director": "Adam Elliot",
+      "cast": "Sarah Snook, Kodi Smit-McPhee, Jacki Weaver, Magda Szubanski, Dominique Pinon",
+      "keywords": "difficult childhood, death of father, stop motion, adult animation, death in childbirth, broken family, brother sister relationship, snail, sentimental",
+      "poster_path": "/vh549pxJL5GcQ8MN1jLgubOsNrq.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 11544,
+      "title": "릴로 & 스티치",
+      "overview": "하와이 섬에서 언니 나니와 함께 사는 외톨이 소녀 릴로는 엘비스 프레슬리의 노래를 즐기고 훌라춤을 추며 씩씩하게 하루하루를 살아가는 사랑스런 아이. 늘 친구 하나 만들기가 소원이었던 릴로는 동물보호소에서 스티치를 만나게 되자 그를 집으로 데려간다. 릴로에겐 그저 귀여울 뿐인 강아지로 보이지만 사실 스티치는 투로 행성의 실험용 외계 생명체. 은하계 감옥으로 끌려가던 중 도망치다가 그만 지구에 불시착한 것이다. 투로 행성의 스티치 추격대가 지구로 날아오고 스티치는 갖은 꾀로 그들의 추적을 피해다닌다.",
+      "tagline": "전세계를 뒤흔들 스타 탄생",
+      "genres": "애니메이션, 가족, 코미디",
+      "production_countries": "United States of America",
+      "vote_average": 7.542,
+      "runtime": 85,
+      "original_language": "en",
+      "director": "Dean DeBlois, Chris Sanders",
+      "cast": "Daveigh Chase, Chris Sanders, Tia Carrere, David Ogden Stiers, Kevin McDonald",
+      "keywords": "sibling relationship, mutation, extraterrestrial technology, hawaii, adoption, villain, alien life-form, alien, dog, dead parents, native hawaiian, playful",
+      "poster_path": "/3Ila1FBT3IUeSvD1PCuxMJphHt0.jpg"
+    }
+  },
+  {
+    "model": "movies.movie",
+    "fields": {
+      "tmdb_id": 302946,
+      "title": "어카운턴트",
+      "overview": "크리스찬 울프(벤 애플렉)는 동네 상점에서 혼자 ZZZ 공인회계사 사무소를 운영하는 회계사다. 언뜻 보기에 평범한 회계사 같지만 크리스찬을 찾는 고객에는 두 종류가 있다. 하나는 동네 주민이고 다른 하나는 거물급 범죄자들이다. 범죄자들을 고객으로 상대하며 때때로 크리스찬은 킬러의 역할을 맡기도 한다. 크리스찬이 새로 수임한 업무는 자금 횡령 의혹이 있는 벤처기업의 재무 조사. 처음 횡령 의혹을 제기한 사내 회계사 다나(안나 켄드릭)와 크리스찬은 점차 횡령보다 더 복잡한 사건이 배후에 있음을 깨닫는다. 한편 재무부 범죄전담반은 크리스찬이 여러 범죄 사건에 연루된 인물이라는 사실을 발견하고 조사를 요청하는데...",
+      "tagline": "악당의 회계사, 그를 잘못 건드렸다",
+      "genres": "범죄, 스릴러, 드라마",
+      "production_countries": "United States of America",
+      "vote_average": 7.1,
+      "runtime": 128,
+      "original_language": "en",
+      "director": "Gavin O'Connor",
+      "cast": "Ben Affleck, Cynthia Addai-Robinson, Anna Kendrick, J.K. Simmons, Jon Bernthal",
+      "keywords": "prison, sniper, assassin, autism, military service, money, treasury department, sniper rifle, gunfight, loner, hand to hand combat, numbers, accountant, math genius, brother brother relationship",
+      "poster_path": "/f6SW5VjX2w1lPwzswCsm6XbvlAS.jpg"
     }
   }
 ]
