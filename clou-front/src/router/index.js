@@ -25,6 +25,12 @@ const router = createRouter({
       component: MyPageView,
       meta: { requiresAuth: true } // 인증이 필요한 페이지로 표시
     },
+    { 
+      path: '/profile/:username', 
+      name: 'userProfile', 
+      component: MyPageView, // 마이페이지 컴포넌트 재사용
+      props: true // URL 파라미터를 props로 전달
+    },
   ],
 })
 
