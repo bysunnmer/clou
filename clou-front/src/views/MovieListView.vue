@@ -120,9 +120,11 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { fetchMovies, toggleMovieLike } from '@/api/movies'
+import { fetchMovies } from '@/api/movies'
+import { useMovieStore } from '@/stores/movie'
 
 // 상태 관리
+const movieStore = useMovieStore()
 const movies = ref([])
 const filteredMovies = ref([])
 const isLoading = ref(true)
@@ -259,14 +261,15 @@ const toggleLike = async (movie) => {
       throw new Error('TMDB ID가 없습니다')
     }
     
-    const result = await toggleMovieLike(tmdbId)
+    // 스토어를 통해 좋아요 토글 처리
+    const result = await movieStore.toggleLike(movie)
     
     if (result.success) {
       // 이전 상태를 기억
       const previousState = movie.is_liked
       
       // 서버 응답에 따라 좋아요 상태 업데이트
-      movie.is_liked = result.data.liked
+      movie.is_liked = !previousState
       
       // 좋아요를 누른 경우에만 애니메이션 표시
       if (!previousState && movie.is_liked) {
@@ -275,8 +278,11 @@ const toggleLike = async (movie) => {
           movie.newlyLiked = false
         }, 1000)
       }
+      
+      // 찜한 영화 목록 다시 불러오기
+      movieStore.fetchLikedMovies()
     } else {
-      throw new Error(result.message || '오류가 발생했습니다')
+      throw new Error(result.error || '오류가 발생했습니다')
     }
   } catch (err) {
     console.error('영화 찜하기 오류:', err)
