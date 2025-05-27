@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 // 기본 URL 설정 (공통 기본 경로)
-const BASE_URL = 'http://localhost:8001';
+const BASE_URL = 'http://localhost:8000';
 
 // API v1 엔드포인트를 위한 인스턴스
 const api = axios.create({
