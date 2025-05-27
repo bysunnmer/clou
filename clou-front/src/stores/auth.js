@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia'
-import axios from 'axios'
-
-// API 기본 URL 설정
-const API_BASE_URL = 'http://localhost:8000'
+import { authApi } from '@/api/axios'
+import { authService } from '@/api/auth'
 
 export const useAuthStore = defineStore('auth', {
   // 상태(state)
@@ -48,26 +46,36 @@ export const useAuthStore = defineStore('auth', {
 
   // 액션(actions)
   actions: {
-    // 사용자 이름 중복 확인
+    // 사용자 이름 중복 체크
     async checkUsernameExists(username) {
       try {
-        const response = await axios.post(`${API_BASE_URL}/accounts/check-username/`, { username })
-        this.fieldExists.username = response.data.exists
-        return response.data.exists
+        const result = await authService.checkUsernameExists(username)
+        
+        if (!result.success) {
+          throw new Error(result.message || '사용자 이름 중복 체크 중 오류가 발생했습니다')
+        }
+        
+        this.fieldExists.username = result.data.exists
+        return result.data.exists
       } catch (error) {
-        console.error('사용자 이름 중복 확인 오류:', error)
+        console.error('사용자 이름 중복 체크 중 오류:', error)
         return false
       }
     },
-
-    // 이메일 중복 확인
+    
+    // 이메일 중복 체크
     async checkEmailExists(email) {
       try {
-        const response = await axios.post(`${API_BASE_URL}/accounts/check-email/`, { email })
-        this.fieldExists.email = response.data.exists
-        return response.data.exists
+        const result = await authService.checkEmailExists(email)
+        
+        if (!result.success) {
+          throw new Error(result.message || '이메일 중복 체크 중 오류가 발생했습니다')
+        }
+        
+        this.fieldExists.email = result.data.exists
+        return result.data.exists
       } catch (error) {
-        console.error('이메일 중복 확인 오류:', error)
+        console.error('이메일 중복 체크 중 오류:', error)
         return false
       }
     },
@@ -75,11 +83,16 @@ export const useAuthStore = defineStore('auth', {
     // 닉네임 중복 확인
     async checkNicknameExists(nickname) {
       try {
-        const response = await axios.post(`${API_BASE_URL}/accounts/check-nickname/`, { nickname })
-        this.fieldExists.nickname = response.data.exists
-        return response.data.exists
+        const result = await authService.checkNicknameExists(nickname)
+        
+        if (!result.success) {
+          throw new Error(result.message || '닉네임 중복 체크 중 오류가 발생했습니다')
+        }
+        
+        this.fieldExists.nickname = result.data.exists
+        return result.data.exists
       } catch (error) {
-        console.error('닉네임 중복 확인 오류:', error)
+        console.error('닉네임 중복 체크 중 오류:', error)
         return false
       }
     },
@@ -89,27 +102,23 @@ export const useAuthStore = defineStore('auth', {
       this.error = null
 
       try {
-        const response = await axios.post(`${API_BASE_URL}/accounts/login/`, {
-          username,  // 사용자 이름 직접 전달
-          password,
-        })
-
-        // dj-rest-auth는 로그인 시 key (토큰)만 반환
-        const token = response.data.key
+        // authService를 사용하여 로그인 요청
+        const result = await authService.login({ username, password })
+        
+        if (!result.success) {
+          throw new Error(result.message || '로그인 중 오류가 발생했습니다')
+        }
+        
+        // 토큰은 authService에서 이미 localStorage에 저장됨
+        const token = localStorage.getItem('token')
         
         if (!token) {
-          throw new Error('토큰이 받아지지 않았습니다')
+          throw new Error('토큰이 설정되지 않았습니다')
         }
 
         // 상태 업데이트
         this.token = token
-        this.isAuthenticated = true  // 인증 상태 업데이트
-        
-        // 로컬 스토리지에 토큰 저장
-        localStorage.setItem('token', token)
-        
-        // Axios 인터셉터 설정
-        this.setupInterceptors()
+        this.isAuthenticated = true
         
         // 사용자 정보 가져오기
         await this.fetchUserProfile()
@@ -117,8 +126,7 @@ export const useAuthStore = defineStore('auth', {
         return { success: true }
       } catch (error) {
         // 에러 처리
-        this.error = error.response?.data?.non_field_errors?.[0] || 
-                    '로그인 중 오류가 발생했습니다'
+        this.error = error.message || '로그인 중 오류가 발생했습니다'
         return { success: false, error: this.error }
       } finally {
         this.loading = false
@@ -130,7 +138,7 @@ export const useAuthStore = defineStore('auth', {
       this.loading = true
       this.error = null
       
-      // dj-rest-auth 필드 형식에 맞게 데이터 구성
+      // 회원가입 데이터 구성
       const registrationData = {
         username: userData.username,
         email: userData.email,
@@ -140,56 +148,49 @@ export const useAuthStore = defineStore('auth', {
       };
       
       try {
-        // 회원가입 API 요청
-        const response = await axios.post(`${API_BASE_URL}/accounts/signup/`, registrationData)
-        return { success: true, data: response.data }
-      } catch (error) {
-        // 오류 처리
-        let errorObj = {}
+        // authService를 사용하여 회원가입 요청
+        const result = await authService.register(registrationData)
         
-        if (error.response) {
-          // 서버에서 반환된 오류 처리
-          if (error.response.status === 500) {
-            const errorHtml = error.response.data;
-            
-            // 일반적인 중복 오류 패턴 검사
-            if (errorHtml && errorHtml.includes('UNIQUE constraint failed')) {
-              // 닉네임 중복
-              if (errorHtml.includes('accounts_user.nickname')) {
-                errorObj = { nickname: ['이미 사용 중인 닉네임입니다.'] };
-              } 
-              // 사용자 이름 중복
-              else if (errorHtml.includes('accounts_user.username')) {
-                errorObj = { username: ['이미 사용 중인 사용자 이름입니다.'] };
-              }
-              // 이메일 중복
-              else if (errorHtml.includes('accounts_user.email')) {
-                errorObj = { email: ['이미 사용 중인 이메일입니다.'] };
-              }
-              // 기타 데이터베이스 제약조건 오류
-              else {
-                errorObj = { non_field_errors: ['데이터베이스 오류가 발생했습니다.'] };
-              }
-            } else {
-              // 기타 500 오류
-              errorObj = { non_field_errors: ['서버 오류가 발생했습니다.'] };
-            }
-          } 
-          // 400 오류 (Django DRF에서 반환하는 JSON 형식)
-          else if (typeof error.response.data === 'object') {
-            errorObj = error.response.data;
-          } 
-          // 기타 오류
-          else {
-            errorObj = { non_field_errors: ['회원가입 중 오류가 발생했습니다.'] };
-          }
-        } else {
-          // 서버 연결 자체가 안 되는 경우
-          errorObj = { non_field_errors: ['서버에 연결할 수 없습니다.'] };
+        if (!result.success) {
+          throw new Error(result.message || '회원가입 중 오류가 발생했습니다')
         }
         
-        this.error = '회원가입 중 오류가 발생했습니다'
-        return { success: false, errors: errorObj }
+        // 회원가입 성공 시 자동 로그인 처리 제거
+        // 토큰이 있으면 제거 (회원가입 후 자동 로그인 방지)
+        localStorage.removeItem('token')
+        this.token = null
+        this.isAuthenticated = false
+        this.user = null
+        
+        return { success: true }
+      } catch (error) {
+        // 에러 처리
+        if (error.response && error.response.data) {
+          const errorData = error.response.data
+          
+          // 필드별 오류 메시지 구성
+          let errorMessage = ''
+          
+          if (typeof errorData === 'object') {
+            // 각 필드별 오류 메시지를 문자열로 변환
+            Object.keys(errorData).forEach(key => {
+              const fieldErrors = errorData[key]
+              if (Array.isArray(fieldErrors)) {
+                errorMessage += `${key}: ${fieldErrors.join(', ')}\n`
+              } else {
+                errorMessage += `${key}: ${fieldErrors}\n`
+              }
+            })
+          } else {
+            errorMessage = error.message || '회원가입 중 오류가 발생했습니다.'
+          }
+          
+          this.error = errorMessage
+        } else {
+          this.error = error.message || '회원가입 중 오류가 발생했습니다.'
+        }
+        
+        return { success: false, error: this.error }
       } finally {
         this.loading = false
       }
@@ -200,34 +201,19 @@ export const useAuthStore = defineStore('auth', {
       this.loading = true
 
       try {
-        // 토큰이 있을 경우에만 서버에 로그아웃 요청
-        if (this.token) {
-          await axios.post(
-            'http://localhost:8000/accounts/logout/',
-            {},
-            { headers: { Authorization: `Token ${this.token}` } }
-          )
-        }
-
-        // 상태 초기화
+        // authService를 사용하여 로그아웃 요청
+        await authService.logout()
+        
+        // 상태 초기화 (토큰은 authService에서 이미 제거됨)
         this.token = null
         this.user = null
-        this.isAuthenticated = false  // 인증 상태 초기화
-
-        // 로컬 스토리지 정리
-        localStorage.removeItem('token')
-        localStorage.removeItem('user')
-
-        return { success: true }
+        this.isAuthenticated = false
       } catch (error) {
-        console.error('로그아웃 오류:', error)
-        // 오류가 발생해도 클라이언트 측 로그아웃은 처리
+        console.error('로그아웃 중 오류:', error)
+        // 오류가 발생해도 클라이언트에서는 로그아웃 처리를 진행
         this.token = null
         this.user = null
-        localStorage.removeItem('token')
-        localStorage.removeItem('user')
-
-        return { success: true }
+        this.isAuthenticated = false
       } finally {
         this.loading = false
       }
@@ -240,15 +226,17 @@ export const useAuthStore = defineStore('auth', {
       this.loading = true
 
       try {
-        const response = await axios.get('http://localhost:8000/accounts/user/', {
-          headers: { Authorization: `Token ${this.token}` }
-        })
-
+        const result = await authService.getUserProfile()
+        
+        if (!result.success) {
+          throw new Error(result.message || '사용자 정보 조회 중 오류가 발생했습니다')
+        }
+        
         // 사용자 정보 업데이트
-        this.user = response.data
-        localStorage.setItem('user', JSON.stringify(response.data))
+        this.user = result.data
+        localStorage.setItem('user', JSON.stringify(result.data))
 
-        return { success: true, data: response.data }
+        return { success: true, data: result.data }
       } catch (error) {
         console.error('사용자 정보 조회 오류:', error)
 
@@ -267,43 +255,43 @@ export const useAuthStore = defineStore('auth', {
     },
 
     // 인증 상태 초기화 (앱 시작 시 호출)
-    initAuth() {
+    async initAuth() {
       const token = localStorage.getItem('token')
       if (token) {
-        // 토큰이 있으면 인증 상태 활성화
-        this.token = token
-        this.isAuthenticated = true
-        this.setupInterceptors()
-        // 사용자 정보 새로 조회 (최신 상태 유지를 위해 활성화)
-        this.fetchUserProfile()
-      }
-    },
-
-    // Axios 인터셉터 설정
-    setupInterceptors() {
-      // 요청 인터셉터 - 인증 토큰 추가
-      axios.interceptors.request.use(
-        (config) => {
-          // 토큰이 있으면 Authorization 헤더에 추가
-          if (this.token) {
-            config.headers.Authorization = `Token ${this.token}`
+        try {
+          // 토큰 검증
+          const result = await authService.verifyAuth()
+          
+          if (result.success && result.authenticated) {
+            // 토큰이 유효하면 인증 상태 활성화
+            this.token = token
+            this.isAuthenticated = true
+            this.user = result.user
+            
+            // 로컬 스토리지에 사용자 정보 업데이트
+            try {
+              localStorage.setItem('user', JSON.stringify(result.user))
+            } catch (e) {
+              console.error('사용자 정보 저장 중 오류:', e)
+            }
+          } else {
+            // 토큰이 유효하지 않으면 초기화
+            this.token = null
+            this.user = null
+            this.isAuthenticated = false
+            localStorage.removeItem('token')
+            localStorage.removeItem('user')
           }
-          return config
-        },
-        (error) => Promise.reject(error)
-      )
-
-      // 응답 인터셉터 - 401 오류 처리
-      axios.interceptors.response.use(
-        (response) => response,
-        (error) => {
-          // 인증 오류인 경우 로그아웃 처리
-          if (error.response?.status === 401) {
-            this.logout()
-          }
-          return Promise.reject(error)
+        } catch (error) {
+          console.error('인증 확인 중 오류:', error)
+          // 오류 발생 시 초기화
+          this.token = null
+          this.user = null
+          this.isAuthenticated = false
+          localStorage.removeItem('token')
+          localStorage.removeItem('user')
         }
-      )
+      }
     },
   },
 })

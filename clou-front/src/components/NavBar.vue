@@ -99,6 +99,18 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    background: none;
+    box-shadow: none;
+    height: 0;
+    padding: 0;
+    overflow: visible;
+  }
 }
 
 .nav-left, .nav-right {
@@ -156,8 +168,8 @@ onBeforeUnmount(() => {
 
 /* 모바일 */
 .menu-container {
-  position: absolute;
-  top: 0.5rem;
+  position: fixed;
+  top: 1rem;
   right: 1rem;
   display: flex;
   flex-direction: column;
@@ -166,27 +178,63 @@ onBeforeUnmount(() => {
 }
 
 .logo-mobile {
-  height: 64px;
+  height: 42px;
+  width: 42px;
   cursor: pointer;
-  background: none;
+  background: #111;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-mobile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .nav-links.mobile {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   background-color: #111;
-  padding: 1rem 1rem;
+  padding: 0.8rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  width: auto;
+  min-width: 150px;
 }
 
 .nav-links.mobile a,
 .nav-links.mobile button {
   color: white;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid transparent;
+}
+
+.nav-links.mobile a:hover,
+.nav-links.mobile button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #42b883;
+  transform: translateX(3px);
+}
+
+.nav-links.mobile a.router-link-active {
+  background-color: rgba(66, 184, 131, 0.2);
+  border-left: 3px solid #42b883;
+  font-weight: 600;
 }
 
 .domino-enter-from {
