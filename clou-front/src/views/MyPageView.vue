@@ -23,6 +23,15 @@
         </div>
       </div>
 
+      <!-- 나의 다이어리 섹션 -->
+      <div class="section diary-section">
+        <h3>나의 다이어리 📝</h3>
+        <button @click="showDiaryModal = true" class="diary-button">
+          <span class="icon">📅</span>
+          다이어리 열기
+        </button>
+      </div>
+
       <!-- 인생 영화 섹션 -->
       <div class="section">
         <h3>인생 영화</h3>
@@ -93,6 +102,8 @@
       </div>
     </div>
   </div>
+  <!-- 다이어리 모달 -->
+  <DiaryModal v-if="showDiaryModal" @close="showDiaryModal = false" />
 </template>
 
 <script setup>
@@ -100,6 +111,8 @@ import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import axios from 'axios'
+// 다이어리 모달 컴포넌트 추가
+import DiaryModal from '@/components/diary/DiaryModal.vue'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -110,6 +123,7 @@ const likedMovies = ref([])
 const loading = ref(true)
 const error = ref(null)
 const activeTab = ref('reviews')
+const showDiaryModal = ref(false)
 
 onMounted(async () => {
   // 인증 확인
@@ -350,5 +364,38 @@ function formatDate(dateString) {
   color: #777;
   background-color: #f9f9f9;
   border-radius: 4px;
+}
+
+/* 다이어리 섹션 스타일 */
+.diary-section {
+  background-color: #f3f8ff;
+  border-left: 4px solid #4c84ff;
+}
+
+.diary-button {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #4c84ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diary-button:hover {
+  background-color: #3a70e3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.diary-button .icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
 }
 </style>

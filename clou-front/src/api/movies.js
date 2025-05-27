@@ -127,3 +127,8 @@ export const deleteReviewReply = async (replyId) => {
   }
 }
 
+// ✅ 영화 검색
+export const searchMovies = (query) => {
+  return api.get(`/movies/search/?query=${encodeURIComponent(query)}`)
+}
+
