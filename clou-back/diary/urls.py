@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.diary_list, name='diary-list'),
-    path('<int:entry_pk>/', views.diary_detail, name='diary-detail'),
+    path('monthly/<int:year>/<int:month>/', views.monthly_diary, name='diary-monthly'),
+    path('<int:entry_id>/', views.diary_detail, name='diary-detail'),
 ]

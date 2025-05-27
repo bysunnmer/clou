@@ -6,6 +6,7 @@ import EmotionView from '@/views/EmotionView.vue'
 import SignUpView from '@/views/SignUpView.vue'
 import LoginView from '@/views/LoginView.vue'
 import MyPageView from '@/views/MyPageView.vue'
+import DiaryPage from '@/views/DiaryPage.vue'
 
 // 인증 상태 관리 스토어 가져오기
 import { useAuthStore } from '@/stores/auth'
@@ -23,6 +24,12 @@ const router = createRouter({
       path: '/mypage', 
       name: 'mypage', 
       component: MyPageView,
+      meta: { requiresAuth: true } // 인증이 필요한 페이지로 표시
+    },
+    {
+      path: '/diary',
+      name: 'diary',
+      component: DiaryPage,
       meta: { requiresAuth: true } // 인증이 필요한 페이지로 표시
     },
   ],

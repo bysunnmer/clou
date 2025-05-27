@@ -41,3 +41,8 @@ export const toggleReviewLike = (reviewId, liked) => {
     : api.post(`/reviews/${reviewId}/like/`)
 }
 
+// ✅ 영화 검색
+export const searchMovies = (query) => {
+  return api.get(`/movies/search/?query=${encodeURIComponent(query)}`)
+}
+
