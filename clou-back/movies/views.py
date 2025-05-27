@@ -11,6 +11,9 @@ from .serializers import (
     ReviewSerializer,
     ReviewReplySerializer
 )
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 # Create your views here.
 @api_view(['GET'])
@@ -146,3 +149,29 @@ def review_reply_detail(request, reply_id):
     elif request.method == 'DELETE':
         reply.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+# ✅ 사용자별 리뷰 목록 조회
+@api_view(['GET'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def user_reviews(request, username=None):
+    """
+    특정 사용자가 작성한 모든 리뷰를 조회합니다.
+    username이 제공되지 않으면 현재 로그인한 사용자의 리뷰를 반환합니다.
+    """
+    # username이 없으면 현재 로그인한 사용자의 리뷰 조회
+    if username is None and request.user.is_authenticated:
+        username = request.user.username
+    elif username is None:
+        return Response({'error': '사용자 이름이 필요합니다.'}, status=status.HTTP_400_BAD_REQUEST)
+    
+    # 사용자 존재 여부 확인
+    user = get_object_or_404(User, username=username)
+    
+    # 사용자가 작성한 모든 리뷰 조회 (최신순 정렬)
+    reviews = Review.objects.filter(user=user).order_by('-created_at')
+    
+    # 각 리뷰에 영화 정보를 포함하도록 serializer 컨텍스트 설정
+    serializer = ReviewSerializer(reviews, many=True, context={'include_movie': True})
+    
+    return Response(serializer.data)
